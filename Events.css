@@ -1,0 +1,8 @@
+body{
+    background-image:url(images/abc5.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+.navbar{
+    font-family: cursive;
+    width: 100%;
+}
