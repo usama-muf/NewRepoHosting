@@ -84,12 +84,7 @@ tr:nth-child(even)
 {
     background-color:pink;
 }
-.container
-{
-    text-align: center;
-    color: beige;
-    padding: 40px;
-}
+
 .footer
 {
     color: white;
