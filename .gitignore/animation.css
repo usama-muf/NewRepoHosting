@@ -9,7 +9,7 @@ html{
     
 }
 .box{
-    border: 3px solid #;
+    border: 3px solid #00;
     height: 50%;
     background: linear-gradient(45deg,#4b346b,#313566,#284c5c,#4bb885,#96ed64,#9c8b40,#ff5757,#de8e78,#b7de6f, #5de3c1,#4e61bf,#995ced);
     background-size: 200% 200%;

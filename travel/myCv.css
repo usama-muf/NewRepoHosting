@@ -1,0 +1,133 @@
+body,html{
+    background-color:chartreuse;
+    z-index: -;
+}
+
+.sideNav{
+    
+    display: none;
+    background-color: white;
+    height: 114%;
+    width: 180px;
+   
+    position: fixed;
+    z-index: 1;
+   left: 0;
+    top: 0;
+   
+    overflow: hidden;
+    padding-top: 10px;
+    
+    
+}
+.sideNav a{
+    display: block;
+    text-decoration: none;
+    font-family: serif;
+    font-size: 30px;
+    color: rgba(56, 107, 39,1);
+    padding: 12px 10px;   
+    
+}
+
+.sideNav a:hover{
+    background-color:rgba(122, 118, 171,.5);
+    color: rgba(28, 55, 82,.9);
+}
+
+
+.closeBtn{
+    text-align: center;
+    
+}
+
+
+.footer{
+    left: 0;
+    padding-top: 280%;
+    text-align: center;
+
+
+}
+.boxT{
+    
+    border: 1px solid rgba(0,0,0,.3) ;
+    margin-left: 173px;
+    background:  linear-gradient(-45deg,#4b346b,#313566,#284c5c,#4bb885,#96ed64,#9c8b40,#ff5757,#de8e78,#b7de6f, #5de3c1,#4e61bf,#995ced);
+    background-size: 300% 300%;
+    animation: boxTop 10s ease-in-out infinite;
+    height: 100Px;
+    margin-top: -10px;
+    margin-right: -10px;    
+}
+.boxM{
+    border: 1px solid ;
+    margin-top: 0px;
+    margin-left: 173px;
+    margin-right: -10px;
+    height: 450px;
+    background:  linear-gradient(90deg,#4b346b,#313566,#284c5c,#4bb885,#96ed64,#9c8b40,#ff5757,#de8e78,#b7de6f, #5de3c1,#4e61bf,#995ced);
+    background-size: 500px 500px;
+    animation: boxTop 20s ease-in-out infinite;
+}
+.boxL{
+    border: 1px solid;
+    margin-top: -552px;
+    margin-left: -10px;
+    width: 183px;
+    height: 100%;
+    background-image:url(images/upArrow.jpg);
+     
+    background-size: 150px 150px;
+    background:linear-gradient(180deg);
+    animation: boxLeft 8s ease-in-out infinite;
+    background-attachment: fixed;
+    background-repeat:repeat-y;
+    background-size: 180px 110px;
+}
+@keyframes boxTop{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+@keyframes boxMid{
+    0%{
+        background-position: 0% 50%;
+        
+    }
+    50%{
+        background-position: 100% 50%;
+        
+    }
+    100%{
+        background-position: 0% 50%;
+        
+    }
+}
+@keyframes boxLeft{
+    0%{
+        background-position:  0% 1000px;
+    }
+    50%{
+        background-position: 0px 1000px;
+    }
+
+    100%{
+        background-position:0px 100px ;
+    }
+
+}
+.usamaDp{
+    border: 2px solid;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
