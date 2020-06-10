@@ -1,4 +1,3 @@
-
 //First method for creating instance or prototype 
 /*
 var Person= function(name,yearOfBirth,job,lastName){
@@ -260,7 +259,8 @@ var questions={
     this.ans=ansNum;   
         
 }
-*//*
+*/
+/*
 function questions(queNum){
     return function(ansNum){
         if(queNum===0)
@@ -391,58 +391,54 @@ ques[queNum].correctAnswer();
     //ques[queNum].repeatQue();
      //              }
 }) ();*/
-(function(){
-    var ansScore=0;
-    
-function Questions(question, options, answer){
-    this.question=question;
-    this.options=options;
-    this.answer=answer;
-}
+(function () {
+    var ansScore = 0;
 
-Questions.prototype.QueOpnDisp=function(){
-    console.log(this.question);
-    
-    for(var i=0;i<this.options.length;i++){
-        console.log(i+' : '+this.options[i]);
+    function Questions(question, options, answer) {
+        this.question = question;
+        this.options = options;
+        this.answer = answer;
     }
-}
-Questions.prototype.checkAns=function(){
-        var input=prompt('Enter your Answer Number OR \'Quit\' to EIXT');
-        
-    
-    if(input!='Quit'&& input==this.answer){ 
-        console.log("---------------------------\nyour Answer is Correct\n---------------------------");
-        ansScore+=1;
-        repeatQue();
-        
+
+    Questions.prototype.QueOpnDisp = function () {
+        console.log(this.question);
+
+        for (var i = 0; i < this.options.length; i++) {
+            console.log(i + ' : ' + this.options[i]);
+        }
     }
-    else if(input!='Quit'){
-        console.log('----------------------------------\nWrong Answer\n------------------------------');
-        repeatQue();
+    Questions.prototype.checkAns = function () {
+        var input = prompt('Enter your Answer Number OR \'Quit\' to EIXT');
+
+
+        if (input != 'Quit' && input == this.answer) {
+            console.log("---------------------------\nyour Answer is Correct\n---------------------------");
+            ansScore += 1;
+            repeatQue();
+
+        } else if (input != 'Quit') {
+            console.log('----------------------------------\nWrong Answer\n------------------------------');
+            repeatQue();
+        } else
+            console.log("-----------------------------------\nYou Entered QUIT\n----------------------------\n Your score is :" + ansScore + '\n-------------------------------');
     }
-    
-    else
-        console.log("-----------------------------------\nYou Entered QUIT\n----------------------------\n Your score is :"+ansScore+'\n-------------------------------');
-}
 
 
-var q1=new Questions('Is javaScript the coolest language in the world ?', ['Yes','No','Probably'], 0);
+    var q1 = new Questions('Is javaScript the coolest language in the world ?', ['Yes', 'No', 'Probably'], 0);
 
-var q2= new Questions('What is the capital of India ? ',   ["Agra", 'Cheenai','Delhi', 'Goa'], 2 );
+    var q2 = new Questions('What is the capital of India ? ', ["Agra", 'Cheenai', 'Delhi', 'Goa'], 2);
 
-var q3=new Questions('What does best describe Coding',['Fun', 'Hard', 'Time Waste'], 0);
+    var q3 = new Questions('What does best describe Coding', ['Fun', 'Hard', 'Time Waste'], 0);
 
     repeatQue();
-    
-function repeatQue()
-    {
-var queCount=[q1,q2,q3];
-var randomNo=Math.floor(Math.random()*3);
+
+    function repeatQue() {
+        var queCount = [q1, q2, q3];
+        var randomNo = Math.floor(Math.random() * 3);
 
 
-    
-queCount[randomNo].QueOpnDisp();
-queCount[randomNo].checkAns();   
+
+        queCount[randomNo].QueOpnDisp();
+        queCount[randomNo].checkAns();
     }
 })();

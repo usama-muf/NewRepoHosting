@@ -72,7 +72,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         }
     lastDice=dice;
     }
-    
+        
 });
 
 
