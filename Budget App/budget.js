@@ -199,7 +199,8 @@ var uiControl = (function () {
         lablePercent:'.budget__expenses--percentage',
         lableBudget:'.budget__value',
         container:'.container',
-        expensePercentage:'.item__percentage'
+        expensePercentage:'.item__percentage',
+        dateLable:'.budget__title--month'
     };
 
     var formatNumber= function(num , type){
@@ -291,9 +292,11 @@ var uiControl = (function () {
         
         displayBudget:function(obj){
             
-            document.querySelector(DOMstrings.lableExp).textContent=(obj.totExpenses);
-            document.querySelector(DOMstrings.lableInc).textContent=(obj.totIncome);   
-            document.querySelector(DOMstrings.lableBudget).textContent=(obj.budget);
+            if (obj.budget>=0? type= 'inc': type='exp');
+            
+            document.querySelector(DOMstrings.lableExp).textContent=(formatNumber(obj.totExpenses, 'exp'));
+            document.querySelector(DOMstrings.lableInc).textContent=formatNumber(obj.totIncome, 'inc');   
+            document.querySelector(DOMstrings.lableBudget).textContent=formatNumber(obj.budget, type);
             
            if(obj.percentage!==-1&& obj.budget>=0)
                document.querySelector(DOMstrings.lablePercent).textContent=Math.round(obj.percentage)+'%';
@@ -323,6 +326,18 @@ var uiControl = (function () {
         },
         
         
+        displayMonth: function(){
+            
+            var now= new Date();
+            var year =now.getFullYear();
+            
+            
+            var months=[];
+            months=['January','Feburary','March','April','May','June','July','August','September','October','November','December'];
+            var month=now.getMonth();
+            
+            document.querySelector(DOMstrings.dateLable).textContent= months[month+1]+' , '+year;
+        },
         
         
         
@@ -452,6 +467,7 @@ var control = (function (bgtCtrl, uiCtrl) {
     return{
             init: function(){
                 console.log('PROGRAM HAS STARTED');
+                uiControl.displayMonth();
                 
                 uiCtrl.displayBudget({
                 budget: 0.00,
