@@ -141,7 +141,7 @@ Expenses.prototype.calcPercentage=function(totalIncome){
         
         //3. calculate %of expenses
             if(data.totals.inc>0){
-               data.percentage=(data.totals.exp*100)/data.totals.inc;
+               data.percentage=Math.round((data.totals.exp*100)/data.totals.inc);
 
             }
         },
@@ -198,10 +198,35 @@ var uiControl = (function () {
         lableInc:'.budget__income--value',
         lablePercent:'.budget__expenses--percentage',
         lableBudget:'.budget__value',
-        container:'.container'
+        container:'.container',
+        expensePercentage:'.item__percentage'
     };
 
-
+    var formatNumber= function(num , type){
+            
+            num=Math.abs(num);
+            num= num.toFixed(2);
+            
+            var numSplit= num.split('.');
+            var int=numSplit[0];
+            
+          if(int.length>3){
+               // len=int.length;
+    // int= int.substr(3,int.length-3)+' ,'+int.substr(int.length-6,3)+' ,'+int.substr(int.length-9,3); 
+                int=int.substr(0,int.length-3)+' ,' +int.substr(int.length-3,3);
+          }
+                
+         
+        
+        
+            var dec=(numSplit[1]);
+         //   type==='exp'? sign='-': sign='+';
+           // return type + ' '+ int + dec;
+             return (type=== 'exp' ? '-':'+')+' '+int +' . ' + dec;
+            
+            
+        };
+        
 
 
     return {
@@ -230,7 +255,7 @@ var uiControl = (function () {
             //Replace placeHoleder text 
             newHTML=html.replace('%id%',obj.id);
             newHTML=newHTML.replace('%description%',obj.description);
-            newHTML=newHTML.replace('%value%',obj.value);
+            newHTML=newHTML.replace('%value%',formatNumber(obj.value, type));
            
             
             // Insert HTML into DOM
@@ -273,10 +298,32 @@ var uiControl = (function () {
            if(obj.percentage!==-1&& obj.budget>=0)
                document.querySelector(DOMstrings.lablePercent).textContent=Math.floor(obj.percentage)+'%';
             else
-                document.querySelector(DOMstrings.lablePercent).textContent="";
+                document.querySelector(DOMstrings.lablePercent).textContent="-*-";
             
             
     },
+        displayPercentage: function(percentages){
+            
+            var fields=document.querySelectorAll(DOMstrings.expensePercentage);
+            var nodeListForEach= function(list, callback){
+                for(var i=0;i<list.length;i++){
+                    callback(list[i], i);
+                }
+            }
+            
+            nodeListForEach(fields, function(current, index){
+                
+                if(percentages[index]>0){
+                   current.textContent=percentages[index]+'%';
+                   }
+                else
+                    current.textContent='-*-';
+                
+            });
+        },
+        
+        
+        
         
         
         getDOMstrings: function () {
@@ -336,7 +383,7 @@ var control = (function (bgtCtrl, uiCtrl) {
          var percentages=bgtCtrl.getPercentage();
          
         // 3 to update in control
-        console.log(percentages);
+        uiCtrl.displayPercentage(percentages);
         
     };
     
