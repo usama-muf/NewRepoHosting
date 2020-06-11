@@ -296,7 +296,7 @@ var uiControl = (function () {
             document.querySelector(DOMstrings.lableBudget).textContent=(obj.budget);
             
            if(obj.percentage!==-1&& obj.budget>=0)
-               document.querySelector(DOMstrings.lablePercent).textContent=Math.floor(obj.percentage)+'%';
+               document.querySelector(DOMstrings.lablePercent).textContent=Math.round(obj.percentage)+'%';
             else
                 document.querySelector(DOMstrings.lablePercent).textContent="-*-";
             
