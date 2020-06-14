@@ -11,7 +11,7 @@ body,html{
     background-position: top;
     background-repeat:no-repeat;
     padding: 20px;
-    overflow: hidden;
+    
 }
 span{
     color: black;
@@ -79,8 +79,8 @@ span{
     width: 89%;
     margin: 5%;
     margin-top: 4%;
-     background-image: linear-gradient(rgba(0,0,0,.1)),rgba(0,0,0,.2);
-    background-image:url(images/multicolored-abstract-painting-1269968.jpg);
+    background-image:radial-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),linear-gradient(rgba(255,255,255,.2),rgba(255,255,255,.2)),url(images/multicolored-abstract-painting-1269968.jpg);
+    
     background-size: 150% 150%;
     animation: animate-box-0 10s ease-in-out infinite;
     box-shadow: 0px 5px 10px 4px;
@@ -101,7 +101,7 @@ span{
 }
 
 .box-1{
-    border: 1px solid black;
+    border: 0px solid black;
     height: 35%;
     width: 77%;
     margin-top: -20%;
@@ -149,6 +149,22 @@ p{
     font-weight: 800;
 }
 
+
+.box-2{
+    border: 1px solid;
+    margin-top: 19px;
+    height: 200px;
+    width: 990px;
+    box-shadow: 8px 10px 20px;
+    border-radius: 10px;
+    ransform: rotate3d(0,0,1, -45deg);
+    z-index: 1;
+}
+#description-box{
+    font-size: 25px;
+    float: left;
+    margin-left: 300px;
+}
 /*.hamburgerBox0{
     border: 1px solid ;
     height: 50px;
@@ -255,18 +271,3 @@ p{
     }
 
 }*/
-
-.box-2{
-    border: 1px solid;
-    margin-top: 19px;
-    height: 200px;
-    width: 990px;
-    box-shadow: 8px 10px 20px;
-    border-radius: 10px;
-    
-}
-#description-box{
-    font-size: 25px;
-    float: left;
-    margin-left: 300px;
-}

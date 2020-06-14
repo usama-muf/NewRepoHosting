@@ -227,6 +227,13 @@ var uiControl = (function () {
             
             
         };
+    
+     var nodeListForEach= function(list, callback){
+                for(var i=0;i<list.length;i++){
+                    callback(list[i], i);
+                }
+            };
+           
         
 
 
@@ -244,13 +251,13 @@ var uiControl = (function () {
             
             if(type==='inc'){
                 var element=DOMstrings.incomeContainer;
-                var html= '<div class="item clearfix" id="inc-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                var html= '<div class="item clearfix" id="inc-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete">  <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
             
             }
             
             else if(type==='exp'){
                 element=DOMstrings.expensesContainer;
-                html=' <div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">%percentage%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                html=' <div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">%percentage%</div><div class="item__delete"> <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
             }
             
             //Replace placeHoleder text 
@@ -308,11 +315,6 @@ var uiControl = (function () {
         displayPercentage: function(percentages){
             
             var fields=document.querySelectorAll(DOMstrings.expensePercentage);
-            var nodeListForEach= function(list, callback){
-                for(var i=0;i<list.length;i++){
-                    callback(list[i], i);
-                }
-            }
             
             nodeListForEach(fields, function(current, index){
                 
@@ -340,10 +342,21 @@ var uiControl = (function () {
         },
         
         
-        
+        changedContainer: function(){
+            var fields= document.querySelectorAll(DOMstrings.inputType+','+
+                                                          DOMstrings.inputDescription+','+
+                                                          DOMstrings.inputvalue);
+              nodeListForEach(fields, function(current){
+                current.classList.toggle('red-focus');
+            });
+           
+            document.querySelector(DOMstrings.inputBtn).classList.toggle('red');
+            
+            },
+            
         getDOMstrings: function () {
             return DOMstrings;
-        },
+        }
         
 
         
@@ -368,6 +381,7 @@ var control = (function (bgtCtrl, uiCtrl) {
     });
         
         document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
+        document.querySelector(DOM.inputType).addEventListener('change',uiCtrl.changedContainer);
 
     
                    
