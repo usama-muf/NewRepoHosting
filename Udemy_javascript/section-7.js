@@ -343,7 +343,7 @@ var mohammed= new usamaFamily('mohammed',1998,'umar' ,'america');
 //////////////////////////////////////////////
 //*******************************************
 
-
+/*
 (function(){
 var Questions= new Map();
 Questions.set('ques', 'Which lake is the largest lake in the world?');
@@ -355,7 +355,7 @@ Questions.set('answer', 1);
 Questions.set(true,'your Answer is Correct :D');
 Questions.set(false,'your Answer is Wrong, Please try again');
 
-console.log(Questions);
+//console.log(Questions);
 
 console.log(Questions.get('ques'));
 var ansUser= parseFloat(prompt('Enter Your Answer Here'));
@@ -368,28 +368,220 @@ console.log((ansUser===Questions.get('answer'))?Questions.get(true):Questions.ge
 console.log(Questions);
 Questions.clear();
 console.log(Questions);
-*/
+
 
 })();
 
+*/
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+
+//              CLASSES
+//      ES5
+/*
+var Person5=function(name, dob,job){
+    this.name=name;
+    this.dob=dob;
+    this.job=job;
+  //  this.calcAge();
+    
+    
+}
+
+Person5.prototype.calcAge=function(){
+    var age=parseFloat(new Date().getFullYear-parseFloat(this.dob));
+    console.log(age);
+}
+//Person5.calcAge;
+var usama= new Person5('usama', 1998, 'programmer');
+//console.log(usama);
+
+*/
+
+//////////////////////////////////////////
+///       classes     ES6
+/**
+class Person6{
+    constructor(name,dob, job){
+        this.name=name;
+        this.dob=dob;
+        this.job=job;
+    }
+    
+     calculateAge(){
+        const age=new Date().getFullYear()-parseFloat(this.dob);
+        console.log(age);
+    }
+    static print()
+    {
+        console.log('hi');
+    }
+}
+
+var usama= new Person6('usama Class', 1998, 'programmer');
+console.log(usama);
+Person6.calculateAge();
+Person6.print();
+
+
+*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//CONNECT TWO DIFFERENT FUNCTION CONSTRUCTOR
+//ES5
+
+/*
+var Person5=function(name, dob,job){
+    this.name=name;
+    this.dob=dob;
+    this.job=job;
+
+}
+
+Person5.prototype.calcAge=function(){
+    var age=new Date().getFullYear()-this.dob;
+    console.log(age);
+}
+//Person5.calcAge();
+//var usama= new Person5('usama', 1998, 'programmer');
+//console.log(usama);
 
 
 
+/*
+var Athlete5=function(name,dob,job, olympGame, medal){
+    Person5.call(this,name,dob,job);
+    this.olympGame=olympGame;
+    this.medal=medal;
+    
+}
+
+Athlete5.prototype=Object.create(Person5.prototype);
+
+Athlete5.prototype.meadalWon=function(){
+    this.medal++;
+    console.log(this.medal);
+}
 
 
 
+var usama=new Athlete5('usama', 1998, 'golf',5,4);
+console.log(usama);
+usama.calcAge();
+usama.meadalWon();
+
+//console.log(Array.from(usama).forEach(curr=>curr));
+
+*/
+
+//*************************************************************************************************************************************************************************************
+
+//CONNECT TWO DIFFERENT FUNCTION CONSTRUCTOR
+//ES6
+
+/*
+class Person6{
+    constructor(name,dob, job){
+        this.name=name;
+        this.dob=dob;
+        this.job=job;
+    }
+    
+     calculateAge(){
+        const age=new Date().getFullYear()-parseFloat(this.dob);
+        console.log(age);
+    }
+    
+}
 
 
 
+class Athlete6 extends Person6{
+    constructor(name,dob , olympGames, medals){
+        super(name,dob,job);
+        this.olympGames=olympGames;
+        this.medals=medals;
+    }
+    
+    wonMedal(){
+        this.medals++;
+        console.log(this.medals);
+    }
+}
+
+var usama= new Athlete6('usama Class', 1998, 'programmer',3,10 );
+console.log(usama);
+usama.wonMedal();
+usama.calculateAge();
+*/
+
+
+//name////////////////////////////////////////////////////////////////////////////////////////////////////////////*****************************************************************/////////////////////////////////////////////////////////////////
+// CODING cHALLENGE
+
+var ageT=0,countT=0;
 
 
 
+class Parks{
+    
+   
+    
+    constructor(name, buildYr){
+        this.name=name;
+        this.buildyr=buildYr;
+//        this.noTrees=noTrees;
+//        this.parkArea=parkArea;
+    }
+    
+        avgAgePark(SumAgeTree,noOfPark){
+            
+            this.SumAgeTree=SumAgeTree;
+            this.noOfPark=noOfPark;    
+            const avgTreeAge=SumAgeTree/noOfPark;
+            return `The Average age of All Parks is: ${avgTreeAge}`;
+            
+            
+            
+            
+        }
+
+        treeDensityPark(noTrees,parkArea){
+        this.noTrees=noTrees;
+        this.parkArea=parkArea;
+            
+            const treeDensity=noTrees/parkArea;
+            
+           // return `The Tree Density of ${Density+=treeDensity}`;
+              if(this.noTrees >=1000){
+    console.log(`${this.name} has more than trees  1000`);
+}
+            
+            //tree+=noTrees;
+        return`The Tree Density of ${this.name} park is ${treeDensity}`;
+        }
+    
+   
+}
 
 
+console.log('--PARKS REPORT--');
+var park1=new Parks('park1', 2012);
+
+console.log(park1.treeDensityPark(2000, 4));
+
+console.log(park1.avgAgePark(3600,3));
+
+console.log();
+var park2=new Parks('park2', 2003);
+console.log(park2.treeDensityPark(240,4800));
+//console.log(park2);
 
 
-
-
+var park3=new Parks('park3', 1903);
+console.log(park2.treeDensityPark(24000,4800));
 
 
 

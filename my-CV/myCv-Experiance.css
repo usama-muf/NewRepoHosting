@@ -7,7 +7,8 @@
 body{
     background-color: antiquewhite;
     padding: 20px;
-    background: linear-gradient(180deg, #a0d2eb,#e5eaf5,#d0bdf4,#8458B3,#a28089);
+    background: linear-gradient(-30deg ,#d0bdf4,#8458B3,#a28089,#a0d2eb,#e5eaf5, #a0d2eb,#e5eaf5,#d0bdf4,#8458B3,#a28089,#d0bdf4,#8458B3,#a28089);
+    
     background-repeat: no-repeat;
     overflow: hidden;
     display: flex;
@@ -27,6 +28,7 @@ body{
     overflow:hidden;
     padding-top: 10px;
     position: relative;
+    border-radius: 10%;
     
 }
 
@@ -62,6 +64,7 @@ body{
     transform: scale(1.5);
     z-index: 1000;
     opacity: 1;
+    color:red;
     
 }
 
@@ -107,6 +110,7 @@ body{
 
 
 .text{
+    cursor:default;
     text-align: center;
     position:relative;
 }
