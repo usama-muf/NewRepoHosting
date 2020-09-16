@@ -242,7 +242,7 @@ footer .footer_content ul a:hover{
 
 
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:100px){
     
     /*footer{
         margin: 0;
@@ -272,7 +272,7 @@ footer .footer_content ul a:hover{
 }
 @media screen and (max-width:800px){
     
-    footer{
+    /*footer*/{
     /*max-width: 600px;*/
     height: 400px;
     }
@@ -281,7 +281,7 @@ footer .footer_content ul a:hover{
     height:auto;
     
     }
-    .footer .footer_content .links{
+   /* .footer .footer_content .links*/{
         background: white;
         background-image: url(invertedFooter%20.png);
         width: 100%;
@@ -296,7 +296,7 @@ footer .footer_content ul a:hover{
         /*transform:rotateZ(180deg);background-size: 100% 100%;
         background-repeat: no-repeat;*/
     }
-    footer .footer_content ul a{
+    /*footer .footer_content ul a*/{
     color: #707070;
     font-family: verdana;
     font-size: 16px;
@@ -310,7 +310,7 @@ footer .footer_content ul a:hover{
     
 }
 
-footer .footer_content ul a:hover{
+/*footer .footer_content ul a:hover*/{
     color: saddlebrown;
     margin-left: 10px;
     font-size: 18px;
@@ -319,13 +319,13 @@ footer .footer_content ul a:hover{
     background: white;
     text-shadow: 2px 10px rgba(208, 210, 214,.5);
 }
-   
+  
 
-.footer .footer_content{
+/*.footer .footer_content*/{
     height: auto;
     /*flex-direction: column;*/
    flex-direction:column;
-     
+     """
 }
     
 }
