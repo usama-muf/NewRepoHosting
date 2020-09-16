@@ -270,7 +270,7 @@ footer .footer_content ul a:hover{
 }
     
 }
-@media only screen and (max-width:100px){
+@media screen and (max-width:800px){
     
     footer{
     /*max-width: 600px;*/
