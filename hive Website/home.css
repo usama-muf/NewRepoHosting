@@ -292,9 +292,12 @@ footer .footer_content ul a:hover{
 @media only screen and (max-width:680px){    
     
     .footer .footer_content h4{
-        width: 200px;}
+        width: 200px;
+    color: #d37622}
+    .footer .footer_content h3{color: #707070}
     
     .footer .footer_content .icons{font-size: 35px;width: 300px}
+    .footer .footer_content  img{margin-right: 20px; }
 }
 
 
@@ -305,12 +308,9 @@ footer .footer_content ul a:hover{
     footer{
     /*max-width: 600px;*/
         
-        background-size: 109% 70%;
+        background-size: 109% 100%;
     }
-   .footer .footer_bottom{background-color: blue;
-       
-    
-    }
+   .footer .footer_bottom{}
     
     
     .footer .footer_content .about{
@@ -339,7 +339,7 @@ footer .footer_content ul a:hover{
         color: red;
     }
     .footer .footer_content .icons{font-size: 10px;}
-    .footer .footer_bottom{margin-top: -29px;}
+    .footer .footer_bottom{}
 
     
     /*
@@ -391,3 +391,8 @@ footer .footer_content ul a:hover{
    
     
 }
+@media only screen and (max-width:300px){
+    
+footer{background-size: 109% 100%}
+}
+
