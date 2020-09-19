@@ -309,21 +309,29 @@ footer .footer_content ul a:hover{
     /*max-width: 600px;*/
         
         background-size: 109% 100%;
+        overflow-y: hidden;
     }
    .footer .footer_bottom{}
     
     
     .footer .footer_content .about{
     height:100px;
-    text-align: left;     
+    text-align: left;  
     margin-left:0px;
+   
+        /* margin-left:100px;*/
     
     
     }
     .footer .footer_content  img{
 
+        
         margin-top: 104px;
         margin-right: 10px;
+        /*
+        position:absolute;
+        margin-top: 104px;
+        margin-right: 320px;*/
         
         
         
@@ -331,14 +339,15 @@ footer .footer_content ul a:hover{
     .footer .footer_content h4{
         width: 200px;
         margin-top: 130px;
-        color: red;
+        color: black;
         font-weight: 300;
     }
     .footer .footer_content h3{
         margin-top: 90px;
-        color: red;
+        color: #006299;
     }
-    .footer .footer_content .icons{font-size: 10px;}
+    .footer .footer_content .icons{font-size: 35px;text-align: center;width: 180%;margin-top: 30px;
+    }
     .footer .footer_bottom{}
 
     
