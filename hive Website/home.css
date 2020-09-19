@@ -393,6 +393,9 @@ footer .footer_content ul a:hover{
 }
 @media only screen and (max-width:300px){
     
-footer{background-size: 109% 100%}
+footer{
+    background-size: 109% 100%;
+    overflow-y: hidden
+    }
 }
 
