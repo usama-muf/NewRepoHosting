@@ -9,6 +9,11 @@ html, body{
    /* overflow-x:hidden;
     overflow:auto*/
 }
+
+
+
+/*--------FOOTER PORTION BY MOHAMMED_USAMA------------*/
+/*____________--------------START________-------------------*/
 .page_wrapper{
     min-height: 100%;
     position: relative;
@@ -410,3 +415,5 @@ footer{
     }
 }
 
+/*--------FOOTER PORTION BY MOHAMMED_USAMA------------*/
+/*____________--------------END________-------------------*/

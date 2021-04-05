@@ -8,7 +8,7 @@ GAME RULES:
 */
 
 var scores, roundScore,activePlayer,gamePlay;
-
+alert("Rules:\nRule line 1\nRule line 2\nRule line 3" )
 init();
 
 var lastDice;
