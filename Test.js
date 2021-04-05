@@ -1,4 +1,4 @@
-function describeIndia(country, population, capital) {
+/*function describeIndia(country, population, capital) {
     return `${country} has ${population} peoples and the capital is ${capital}`;
 }
 describeIndia= describeIndia('India', '2 Billion', 'Delhi');
@@ -40,3 +40,7 @@ const listOfNeighbours = [
     ['Bangle','sri'],['china'],['nepal','tibet']
 ];
 console.log(listOfNeighbours[0][1]);
+*/
+function output() {
+    document.
+}
