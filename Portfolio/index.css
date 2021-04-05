@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-color: brown;
+}
+body {
+    background-color: white;
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4));
+    background-size: contain;
+    background-position: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+header {
+    width:auto;
+    position: absolute;
+    text-align: center;
+
+}
+.top {
+    text-align: center;
+}
