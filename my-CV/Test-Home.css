@@ -142,7 +142,6 @@ body{
         
 }
 .box-button:hover{
-    background-color: ;
     box-shadow: 1px 1px 1px 1px;
     transform: rotate(5deg);
     border-radius: 20px;

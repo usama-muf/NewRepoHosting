@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 * {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 2px;
+    margin-right: 2px;
     padding: 0px;;
-    box-sizing:inherit;    
-    
+    box-sizing:inherit;      
 }
 html {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px;
     font-size: 80.5%;
     box-sizing: border-box;
+    border: 1px dashed white;
 }
 body {
     background-color:grey;
@@ -18,7 +21,7 @@ body {
 }
 header {
     position: relative;
-    height: 35vh;
+    height: 30vh;
     text-align: center;
     border: 2px solid black;
 }
@@ -34,8 +37,10 @@ header {
     flex: 10%;
     text-align: center;
     background-color: aqua;
-    padding: 5px;
+    padding: 4px;
     margin: 3px;
+    height: 100%;
+    width: 100%;
 }
 /*.l1 {
     width: 10%;
@@ -75,7 +80,8 @@ main {
     font-size: 40px;
 }
 .title-header {
-    padding-top: 30px;
+    padding-top: 50px;
+    margin-top: 50px;
     font-size: 30px;
 }
 section {
@@ -90,7 +96,36 @@ img{
     margin-left: 50px;
     border-radius: 50%;
 }
+/* adjust paragraph description according to content*/
 .about-me-desc {
-    font-size: 18zpx;
-    text-decoration-style: dotted;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/* Education and Certification part start*/
+
+
+.education-sec {
+    margin-top: 10px;
+    float: left;
+    line-height: 20px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid black;
+}
+.edu-left {
+    flex: 33.33%;
+    font-stretch: expanded;
+}
+
+.edu-right {
+    flex: 33.33%;
+    transform: translate(0%, -6%);
+    font-stretch: expanded;
+}
+.certifications {
+    flex: 33.33%;
+    transform: translate(0%, -30%);
+    font-stretch: expanded;
 }
