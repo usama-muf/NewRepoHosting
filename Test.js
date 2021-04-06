@@ -22,19 +22,19 @@ if(neighbours.includes('India')) {
 
 neighbours[neighbours.indexOf('Indonesia')]='Republic of Indonesia';
 console.log(neighbours);
-
+*/
 const myCountry = {
     country: 'India',
     capital: 'Delhi',
     population: 1400,
     language: 'Hindi' ,
     
-    detaisl: function() {
-        console.log(this.language);
+    rando: function() {
+        document.write(`${this.country} is my country `);
     }
 };
-myCountry.detaisl();
-console.log(this.language);
+myCountry.rando();
+/*console.log(this.language);
 
 const listOfNeighbours = [
     ['Bangle','sri'],['china'],['nepal','tibet']
@@ -42,5 +42,5 @@ const listOfNeighbours = [
 console.log(listOfNeighbours[0][1]);
 */
 function output() {
-    document.
+    document.write("hi");
 }
