@@ -80,21 +80,24 @@ main {
     font-size: 40px;
 }
 .title-header {
-    padding-top: 50px;
-    margin-top: 50px;
+    padding-top: 60px;
+    margin-top: 60px;
     font-size: 30px;
 }
 section {
     text-align: center;
 }
 img{
-    height: 250px;
-    width: 250px;
+    height: 100px;
+    width: 100px;
 }
 .usama-dp {
+    height: 250px;
+    width: 250px;
     float: left;
-    margin-left: 50px;
+    margin-left: 10px;
     border-radius: 50%;
+    transform: translate(0,-20%);
 }
 /* adjust paragraph description according to content*/
 .about-me-desc {
@@ -121,7 +124,7 @@ img{
 
 .edu-right {
     flex: 33.33%;
-    transform: translate(0%, -6%);
+    transform: translate(0%, 0%);
     font-stretch: expanded;
 }
 .certifications {
@@ -129,3 +132,39 @@ img{
     transform: translate(0%, -30%);
     font-stretch: expanded;
 }
+
+/*Skills section start*/
+
+.skills-header {
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+
+.skills-sec-1 {
+    margin-top: 10px;
+    line-height: 20px;
+    display:flex;
+    font-size: 10px;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid black;
+}
+
+.skills-sec-2 {
+    margin-top: 10px;
+    line-height: 20px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid black;
+}
+.skills-sec-3 {
+    margin-top: 10px;
+    line-height: 20px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid black;
+}
+
