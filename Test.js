@@ -41,6 +41,9 @@ const listOfNeighbours = [
 ];
 console.log(listOfNeighbours[0][1]);
 */
-function output() {
-    document.write("hi");
+
+function submitfn () {
+    setTimeout(alert("Thank you, Your form is submitted 👍 "), 300);
+    
+    
 }

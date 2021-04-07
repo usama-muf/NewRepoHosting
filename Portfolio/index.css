@@ -207,3 +207,35 @@ img{
 
 /* cpntact me form starts */
 
+.contact-sec {
+    margin-top: 10px;
+    line-height: 20px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    border: 1px solid black;
+}
+.form-contact-sec {
+    line-height: 20px;
+    border: 1px dashed green;
+    padding-bottom: 10px;
+
+}
+input {
+   width: 100%; 
+   padding-top: 5px;
+   padding-bottom: 5px;
+   margin-bottom: 20px;
+   transition:width 1s ease-in-out;
+   font-size: 20px;
+
+}
+input:focus {
+    border: 3px solid rgb(185, 166, 166);
+}
+.button-input {
+    width: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+
+}
