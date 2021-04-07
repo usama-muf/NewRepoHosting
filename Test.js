@@ -51,11 +51,11 @@ function submitfn () {
     fieldname1 :'entry.775039777'
 }*/
 function checkform(form) {
-    //const fieldname1 ="entry.775039777";
-
-    if(form."entry.value == ""){
+    //fieldname1 =    document.getElementById('entry.775039777');
+    val = document.getElementById('entry.775039777').value;
+    if(val==""){
         alert("Error: Input field empty");
-        //form.entry.focus();
+        document.getElementById('entry.775039777').focus();
         return false;
     }
     alert("Thank you, Your form is submitted 👍 ");

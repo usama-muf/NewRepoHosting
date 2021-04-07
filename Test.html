@@ -9,17 +9,18 @@
     <h1>سلام</h1>
     <button>Enter</button>
     <script type="text/javascript" src="Test.js"></script>
-    <input type="button" value="Display">
+    <input type="button" value="Disp lay">
 
     <section class="contact-sec">
       <form name="gform-contactMe" class="form-contact-sec" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScB2fgVNQZ4XqyUDgRXhXKzPIQjfKI4bAxCsBZDfkBg4IO9rA/formResponse?"
-       target="hidden_iframe" onsubmit="return checkform(this)">
+       target="hidden_iframe" method="GET" onsubmit="return checkform(this.form)">
           First Name: 
           <input type="text" name="entry.775039777" class="namecl" id="entry.775039777" placeholder="First Name..."><br>
-          <input type="submit" class="button-input" value="submit">
+          <input type="submit" class="button-input" value="submit" >
       </form>
      <iframe name="hidden_iframe" style="display:none;" frameborder="0" onload="if(submitted) {}"></iframe> 
   </section>
 
   </body>
 </html>
+<!--onsubmit="return checkform(this)""-->
