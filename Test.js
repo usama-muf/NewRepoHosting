@@ -47,3 +47,17 @@ function submitfn () {
     
     
 }
+/*var DOMstrings= {
+    fieldname1 :'entry.775039777'
+}*/
+function checkform(form) {
+    //const fieldname1 ="entry.775039777";
+
+    if(form."entry.value == ""){
+        alert("Error: Input field empty");
+        //form.entry.focus();
+        return false;
+    }
+    alert("Thank you, Your form is submitted 👍 ");
+    return true;
+}

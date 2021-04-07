@@ -146,14 +146,14 @@
         <section class="contact-sec">
             <form name="gform-contactMe" class="form-contact-sec" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScB2fgVNQZ4XqyUDgRXhXKzPIQjfKI4bAxCsBZDfkBg4IO9rA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                 First Name: 
-                <input type="text" name="entry.775039777" id="entry.775039777"><br>
+                <input type="text" name="entry.775039777" id="entry.775039777" placeholder="First Name..."><br>
                 Last Name: 
-                <input type="text" name="entry.595482302" id="entry.595482302"><br>
+                <input type="text" name="entry.595482302" id="entry.595482302" placeholder="Last Name..."><br>
                 Email:
-                <input type="email" name="entry.1498960553" id="entry.1498960553"><br>
+                <input type="email" name="entry.1498960553" id="entry.1498960553" placeholder="Your Email..."><br>
                 Message:
-                <input type="text" name="entry.21229852" id="entry.21229852"><br>
-                <input type="submit" class="button-input" value="submit" onclick="submitfn()">
+                <input type="text" name="entry.21229852" id="entry.21229852" placeholder="Message..."><br>
+                <input type="submit" class="button-input" value="submit" onclick="if(submitted=true){ submitfn()}">
             </form>
            <iframe name="hidden_iframe" style="display:none;" frameborder="0" onload="if(submitted) {}"></iframe> 
         </section>

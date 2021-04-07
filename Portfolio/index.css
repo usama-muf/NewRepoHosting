@@ -234,8 +234,11 @@ input:focus {
     border: 3px solid rgb(185, 166, 166);
 }
 .button-input {
-    width: 50px;
+    width: 90px;
+    height: 40px;
     border-radius: 5px;
     font-size: 15px;
+    border: none;
+    cursor:pointer;
 
 }
