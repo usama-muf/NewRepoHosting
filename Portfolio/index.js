@@ -23,7 +23,16 @@ function checkForm(form) {
 
 }
 
-function hackerRank() {
-    //document.getElementById('contact').focus();
-    document.write("hi");
+
+var d= new Date();
+const n = d.getFullYear();
+function current() {
+    return n;
 }
+
+var tag = document.createElement("p");
+var newtext= ' copyright © '+current();
+   var text = document.createTextNode(newtext);
+   tag.appendChild(text);
+   var element = document.getElementById("new");
+   element.appendChild(tag);

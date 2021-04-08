@@ -12,8 +12,8 @@ html {
     padding: 10px;
     font-size: 80.5%;
     box-sizing: border-box;
-    border: 1px dashed white;
-    scroll-behavior: smooth;
+/*    border: 1px dashed white;
+*/    scroll-behavior: smooth;
 }
 body {
     background-color:grey;
@@ -24,10 +24,15 @@ header {
     position: relative;
     height: 30vh;
     text-align: center;
-    border: 10px solid black;
-    background-image:none;
+/*    border: 10px solid black;
+*/    background-image:none;
     background-attachment: fixed;
     background-size: cover;
+}
+p {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 100;
 }
 
 .row-header {
@@ -74,10 +79,10 @@ header {
 }
 main {
     margin-top: 10px;
-    border: 10px solid black;
-    text-align: center;
+/*    border: 1px solid black;
+*/    text-align: center;
     padding-top: 20px;
-    transition-delay: 5s;
+    transition-delay: .1s;
 
 }
 .welcome-note {
@@ -103,7 +108,9 @@ img{
     cursor: pointer;
     transform:translate(-200%,0%);
     
-}/*
+}
+/*PARALLAX  EFFECT*/
+/*
 .section {
     background:grey no-repeat center/cover;
     bottom: 0;
@@ -154,7 +161,8 @@ display: block;
     padding-top: 60px;
     margin-top: 60px;
     font-size: 30px;
-    border: 1px dashed yellow;
+    /*border: 1px dashed yellow;*/
+    border-top: 3px solid blue;
 }
 .usama-dp {
     height: 250px;
@@ -179,8 +187,8 @@ display: block;
     display:flex;
     align-items: center;
     justify-content:center;
-    border: 1px solid black;
-}
+/*    border: 1px solid black;
+*/}
 .edu-left {
     flex: 33.33%;
     font-stretch: expanded;
@@ -202,8 +210,8 @@ display: block;
 .skills-header {
     padding-top: 100px;
     margin-top: 100px;
-    border: 1px dashed yellow;
-    position:relative;
+/*    border: 1px dashed yellow;
+*/    position:relative;
 }
 
 .skills-sec-1 {
@@ -213,11 +221,11 @@ display: block;
     font-size: 10px;
     align-items: center;
     justify-content:center;
-    border: 1px solid black;
+/*    border: 1px solid black;*/
 }
 .sec-1-icon {
     flex:10%;
-    border: 2px dotted blue;
+    /*border: 2px dotted blue;*/
 }
 
 .skills-sec-2 {
@@ -226,12 +234,12 @@ display: block;
     display:flex;
     align-items: center;
     justify-content:center;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 .sec-2-icon {
     flex:10%;
-    border: 2px dotted blue;
-}
+/*    border: 2px dotted blue;
+*/}
 
 .skills-sec-3 {
     margin-top: 10px;
@@ -239,12 +247,14 @@ display: block;
     display:flex;
     align-items: center;
     justify-content:center;
-    border: 1px solid black;
-}
+    padding-left:25%;
+    padding-right: 25%;
+/*    border: 1px solid black;
+*/}
 .sec-3-icon {
     flex:10%;
-    border: 2px dotted blue;
-}
+/*    border: 2px dotted blue;
+*/}
 
 /* Project section starts*/
 
@@ -254,34 +264,32 @@ display: block;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dashed green;
-    font-weight: 100;
+/*    border: 1px dashed green;
+*/   
 }
 .project-sec-1{
     flex-direction: row;
     flex: 50%;
-    border:  2px dotted blue;
+/*    border:  2px dotted blue;*/
 }
 .project-sec-2{
     flex:50%;
-    transform: translate(0%, -5%);
-    border:  2px dotted blue;
+    /*border:  2px dotted blue;*/
 }
 
 /* cpntact me form starts */
 
 .contact-sec {
     margin-top: 10px;
-    line-height: 20px;
     display:flex;
     align-items: center;
     justify-content:center;
-    border: 1px solid black;
-}
+/*    border: 1px solid black;
+*/}
 .form-contact-sec {
     line-height: 20px;
-    border: 1px dashed green;
-    padding-bottom: 10px;
+/*    border: 1px dashed green;
+*/    padding-bottom: 10px;
 
 }
 input {
@@ -304,3 +312,25 @@ input:focus {
     border: none;
     cursor:pointer;
 }
+
+.contact-text {
+    margin-top: 20px;
+/*    border: 2px dashed blue;
+*/    line-height: 30px;
+}
+.smallIcons-contact{
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+
+}
+footer {
+    border-top: 1px solid blue;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 8px;
+}
+
+/*//////////////////////////////////////////////////////////////////**/
+/* For mobile display*/
