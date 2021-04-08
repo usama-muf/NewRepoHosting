@@ -24,7 +24,10 @@ header {
     position: relative;
     height: 30vh;
     text-align: center;
-    border: 2px solid black;
+    border: 10px solid black;
+    background-image:none;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .row-header {
@@ -71,20 +74,15 @@ header {
 }
 main {
     margin-top: 10px;
-    border: 2px solid black;
+    border: 10px solid black;
     text-align: center;
     padding-top: 20px;
+    transition-delay: 5s;
 
 }
 .welcome-note {
     text-align: center;
     font-size: 40px;
-}
-.title-header {
-    padding-top: 60px;
-    margin-top: 60px;
-    font-size: 30px;
-    border: 1px dashed yellow;
 }
 section {
     text-align: center;
@@ -92,6 +90,71 @@ section {
 img{
     height: 100px;
     width: 100px;
+}
+.smallIcons-sec {
+    margin-top: 100px;
+    
+}
+.smallIcons {
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform:translate(-200%,0%);
+    
+}/*
+.section {
+    background:grey no-repeat center/cover;
+    bottom: 0;
+    position:sticky;
+
+    padding-top: 50px;
+    justify-content: center;
+    pointer-events: auto;
+display: block;
+    overflow: hidden;
+        z-index: 0;
+    align-items: center;
+
+
+}
+
+.section:nth-last-child(5) .section {
+    height: 100vh;
+    z-index: -1;
+    pointer-events: auto;
+}
+
+.section:nth-last-child(4)  {
+    height: 100vh;
+    pointer-events: auto;
+    z-index: -2;
+}
+.section:nth-last-child(3) {
+    z-index: -3;
+    pointer-events: auto;
+}
+.section:nth-last-child(2) {
+    height: 100vh;
+    z-index: -4;
+    pointer-events: auto;
+}
+.section:last-child {
+    z-index: -5;
+    height: 100vh;
+    pointer-events: auto;
+}
+.section::before {
+    content: " ";
+    position: absolute;
+}
+*/
+.title-header {
+    padding-top: 60px;
+    margin-top: 60px;
+    font-size: 30px;
+    border: 1px dashed yellow;
 }
 .usama-dp {
     height: 250px;
@@ -142,7 +205,6 @@ img{
     border: 1px dashed yellow;
     position:relative;
 }
-
 
 .skills-sec-1 {
     margin-top: 10px;
@@ -232,7 +294,7 @@ input {
 
 }
 input:focus {
-    border: 3px solid rgb(185, 166, 166);
+    border: 5px solid rgb(185, 166, 166);
 }
 .button-input {
     width: 90px;
@@ -241,5 +303,4 @@ input:focus {
     font-size: 15px;
     border: none;
     cursor:pointer;
-
 }

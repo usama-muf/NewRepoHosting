@@ -22,3 +22,8 @@ function checkForm(form) {
     }
 
 }
+
+function hackerRank() {
+    //document.getElementById('contact').focus();
+    document.write("hi");
+}

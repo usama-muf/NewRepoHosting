@@ -45,20 +45,27 @@
     </header>
     <main>
         <h3 class="welcome-note">Welcome to my Portfolio</h3>
-        <h2 class="title-header" id="aboutMe">About Me</h2>
         
-        <section class="about-me-sec" >
+        
+        <section class="about-me-sec section" >
+            <h2 class="title-header" id="aboutMe">About Me</h2>
             <img class="usama-dp" src="images/UsamaDP.jpg" alt="Image Usama">
             <p class="about-me-desc">My name is Usama Lorem ipsum, dolor sit amet c
                 onsectetur adipisicing elit. Maiores minus vel
                  quia dolor tenetur deserunt at eum nemo, unde l
                  audantium odit placeat a. Voluptatibus comm
                  odi labore,accusamus dolorum nihil recusandae?</p>
-            <a download href="files/Mohammed Usama_CV__2-06-2020.pdf" target="_blank">My CV</a>
+            <Section class="smallIcons-sec">
+                <a download href="files/Mohammed Usama_CV__2-06-2020.pdf" target="_blank"><img class="smallIcons"  src="icons/Untitled - Copy1.png" alt="download"></a>
+                <a href="#" target="_blank" title="HackerRank Profile"><img class="smallIcons" src="icons/hacker rank copy.png" alt="hackerrank" onclick="hackerRank()"></a>
+                <a href="www.google.com" target="_blank"><img class="smallIcons" src="icons/GitHub-Mark-120px-plus - Copy.png" alt="GitHub"></a>
+                <a href="#" target="_blank"><img class="smallIcons"  src="icons/hacker earth - Copy.png" alt="HackerEarth"></a>
+            </Section>
         </section>
 
-        <h2 class="title-header" id="education">Education & Cretifications</h2>
-        <section class="education-sec">
+        <section class="section" id="education">
+        <h2 class="title-header" >Education & Cretifications</h2>
+        <section class="education-sec ">
             <section class="edu-left">
                 <h3>BCA</h3>
                 <p>Completed my Graduation (2016 - 19) in BACHELOR OF COMPUTER APPLICATION
@@ -77,9 +84,11 @@
                 <br>iii)    coursera cer 1 </p>
             </section>    
         </section>
+        </section>
 
+        
+        <section class="section">
         <h2 class="title-header" id="skills">Skills</h2>
-        <section>
         <section class="skills-sec-1">
             <section class="sec-1-icon si1" >
                 <img src="icons/c-programming-240.png" alt="c logo">
@@ -130,6 +139,7 @@
         </section>
         </section>
 
+        <section class="section">
         <h2 class="title-header" id="projects">Projects</h2>
         <section class="project-sec">
             <section class="project-sec-1">
@@ -141,8 +151,10 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium suscipit et atque culpa ducimus, architecto officia quidem vitae. Ullam quia cum pariatur qui nobis odio dolorem quae eius dolore sit.</p>
             </section>
         </section>
+        </section>
 
-    <h2 class="title-header" id="contact">Contact Me</h2>
+        <section class="section">
+        <h2 class="title-header" id="contact">Contact Me</h2>
         <section class="contact-sec">
             <form name="gform-contactMe" class="form-contact-sec" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScDYzsQ8i4xKbrrJ_tAAQUTyJZA4rJzaNGAnmqzdAyStJADYw/formResponse?"
              target="hidden_iframe"  method="GET" onsubmit="return checkForm(this)">
@@ -156,7 +168,7 @@
             </form>
            <iframe name="hidden_iframe" style="display:none;" frameborder="0" onload="if(submitted) {}"></iframe> 
         </section>
-
+        </section>
     </main>
 
     <footer></footer>    
