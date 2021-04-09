@@ -4,7 +4,7 @@
     margin-left: 2px;
     margin-right: 2px;
     padding: 0px;;
-    box-sizing:inherit;      
+    box-sizing:border-box;      
 }
 html {
     margin-left: 100px;
@@ -334,3 +334,72 @@ footer {
 
 /*//////////////////////////////////////////////////////////////////**/
 /* For mobile display*/
+@media screen and (min-width:500px )  { 
+
+    html {
+        margin-right: -320px;
+        text-align: center;
+        align-items: center;
+        padding: 100px;
+        box-sizing: border-box;
+        border: 2px dashed white;
+        scroll-behavior: smooth;
+    }
+    header {
+        height: 15vh;
+        }
+     
+    .column-header {
+        flex: 10%;
+        text-align: center;
+        background-color: aqua;
+        padding-left: 6px;
+    }
+    .usama-dp {
+            height: 350px;
+            width: 350px;
+            float: none;
+            transform: translate(0%, 0%);
+        }
+        /* adjust paragraph description according to content*/
+    .about-me-desc {
+        font-weight: 100;
+        font-size: 10px;
+            
+    }
+    .smallIcons {
+        width: 80px;
+        height: 80px;
+        transform:translate(0%,0%);
+        
+    }
+    .education-sec {
+        display: block;
+        justify-content:center;
+    /*    border: 1px solid black;
+    */}
+    .edu-left {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .edu-right {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-top: 300px;
+        padding-bottom: 40px;
+    }
+    .certifications {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    
+
+
+
+   
+}
