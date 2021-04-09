@@ -248,9 +248,12 @@ display: block;
     display:flex;
     align-items: center;
     justify-content:center;
-    padding-left:25%;
-    padding-right: 25%;
+    padding-left:15%;
+    padding-right: 15%;
+    
 /*    border: 1px solid black;
+padding-left:25%;
+    padding-right: 25%;
 */}
 .sec-3-icon {
     flex:10%;
@@ -336,7 +339,7 @@ footer {
 
 /*//////////////////////////////////////////////////////////////////**/
 /* For mobile display*/
-@media screen and (min-width:500px )  { 
+@media screen and (max-width:500px )  { 
 
     html {
         margin-left: 30px;
