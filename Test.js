@@ -61,3 +61,16 @@ function checkform(form) {
     alert("Thank you, Your form is submitted 👍 ");
     return true;
 }
+
+//document.querySelector('.heading').textContent=10;
+
+document.querySelector('.entbut').addEventListener('click',function newf() {
+    var numb= Number(document.querySelector('.inpclass').textContent=10);
+//     document.querySelector('.heading').textContent=numb;
+});
+
+console.log(newf);
+/*
+document.querySelector('.entbut').addEventListener('click',function () {
+    document.querySelector('.heading').textContent= prompt("What's your name ? ");
+});*/
