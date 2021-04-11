@@ -1,3 +1,4 @@
+
 /*function describeIndia(country, population, capital) {
     return `${country} has ${population} peoples and the capital is ${capital}`;
 }
@@ -23,6 +24,7 @@ if(neighbours.includes('India')) {
 neighbours[neighbours.indexOf('Indonesia')]='Republic of Indonesia';
 console.log(neighbours);
 */
+/*
 const myCountry = {
     country: 'India',
     capital: 'Delhi',
@@ -41,7 +43,7 @@ const listOfNeighbours = [
 ];
 console.log(listOfNeighbours[0][1]);
 */
-
+/*
 function submitfn () {
     setTimeout(alert("Thank you, Your form is submitted 👍 "), 300);
     
@@ -50,7 +52,7 @@ function submitfn () {
 /*var DOMstrings= {
     fieldname1 :'entry.775039777'
 }*/
-function checkform(form) {
+/*function checkform(form) {
     //fieldname1 =    document.getElementById('entry.775039777');
     val = document.getElementById('entry.775039777').value;
     if(val==""){
@@ -74,3 +76,27 @@ console.log(newf);
 document.querySelector('.entbut').addEventListener('click',function () {
     document.querySelector('.heading').textContent= prompt("What's your name ? ");
 });*/
+var buttonSplit = document.querySelectorAll('.splitBtn');
+var split = document.querySelectorAll('.split');
+
+
+const splitStart = function () {
+
+    for (let i=0; i<split.length; i++){
+    let left= true;
+    console.log(split[i].classList);
+    if(split[i].classList.contains('p1'))
+        {
+            split[i].classList.remove('p1');
+            split[i].classList.add('p2');
+            console.log(split[i].classList);
+        }
+    else if ( left===true )
+        split[i].classList.add('p1');
+        split[i].classList.remove('p2');
+}
+}
+
+for( let i=0; i<buttonSplit.length; i++) {
+    buttonSplit[i].addEventListener('click' , splitStart );
+}
