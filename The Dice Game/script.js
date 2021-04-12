@@ -8,7 +8,7 @@ GAME RULES:
 */
 
 var scores, roundScore,activePlayer,gamePlay;
-alert("Rules:\nRule line 1\nRule line 2\nRule line 3" )
+//alert("Rules:\nRule line 1\nRule line 2\nRule line 3" )
 init();
 
 var lastDice;
@@ -73,6 +73,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     lastDice=dice;
     }
         
+    
 });
 
 
@@ -183,7 +184,13 @@ activePlayer=0;
     
 }
 
+// pop-up window on start of game 
+document.querySelector('.closeBtn').addEventListener('click', function () {
+    console.log('X clicked');
+    document.querySelector('.Rules').classList.add('hidden');
 
+
+});
 
 
 

@@ -76,7 +76,7 @@ console.log(newf);
 document.querySelector('.entbut').addEventListener('click',function () {
     document.querySelector('.heading').textContent= prompt("What's your name ? ");
 });*/
-var buttonSplit = document.querySelectorAll('.splitBtn');
+/*var buttonSplit = document.querySelectorAll('.splitBtn');
 var split = document.querySelectorAll('.split');
 
 
@@ -99,4 +99,23 @@ const splitStart = function () {
 
 for( let i=0; i<buttonSplit.length; i++) {
     buttonSplit[i].addEventListener('click' , splitStart );
+}*/
+
+var splitBtn= document.querySelector('.splitBtn');
+var split = document.querySelector('.split');
+
+var activeSide=0;
+const toggleColor = function () {
+    document.querySelector(`.split--${activeSide}`).classList.toggle('active');
+
+    activeSide = (activeSide===0? 1:0);
+    document.querySelector(`.split--${activeSide}`).classList.toggle('active');
+
 }
+splitBtn.addEventListener('click', function() {
+    toggleColor();       
+})
+
+document.querySelector('.split').addEventListener('click', function() {
+    toggleColor();
+})

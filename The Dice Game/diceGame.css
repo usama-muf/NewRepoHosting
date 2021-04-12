@@ -65,6 +65,44 @@ body {
     padding: 100px;
 }
 
+.Rules {
+    border: 1px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    width: 70%;
+    background-color: white;
+    padding: 6rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow:  0 3rem 5rem rgba(0, 0, 0, .3);
+    line-height: 1.9;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 50px;
+    cursor: pointer;
+}
+.Rules h1 {
+    font-size: 35px;
+}
+.Rules p {
+    font-size: 25px;
+    line-height: 1.5;
+}
+.hidden {
+    display: none;
+}
+.blurClass {
+    backdrop-filter: blur(80);
+}
+
+
 
 
 /**********************************************
