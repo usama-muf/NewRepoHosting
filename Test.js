@@ -100,7 +100,7 @@ const splitStart = function () {
 for( let i=0; i<buttonSplit.length; i++) {
     buttonSplit[i].addEventListener('click' , splitStart );
 }*/
-
+/*
 var splitBtn= document.querySelector('.splitBtn');
 var split = document.querySelector('.split');
 
@@ -119,3 +119,100 @@ splitBtn.addEventListener('click', function() {
 document.querySelector('.split').addEventListener('click', function() {
     toggleColor();
 })
+*/
+
+
+const game = {
+    team1: 'Bayern Munich',
+    team2: 'Borrussia Dortmund',
+    players: [
+      [
+        'Neuer',
+        'Pavard',
+        'Martinez',
+        'Alaba',
+        'Davies',
+        'Kimmich',
+        'Goretzka',
+        'Coman',
+        'Muller',
+        'Gnarby',
+        'Lewandowski',
+      ],
+      [
+        'Burki',
+        'Schulz',
+        'Hummels',
+        'Akanji',
+        'Hakimi',
+        'Weigl',
+        'Witsel',
+        'Hazard',
+        'Brandt',
+        'Sancho',
+        'Gotze',
+      ],
+    ],
+    score: '4:0',
+    scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+    date: 'Nov 9th, 2037',
+    odds: {
+      team1: 1.33,
+      x: 3.25,
+      team2: 6.5,
+    },
+    scores: {
+        Ganrby :1,
+        Hummels:1,
+        Lewandowski: 2
+    },
+
+    printGoals(...arbPlayer) {
+        console.log(...arbPlayer);
+    }
+  };
+
+  /*const players1 = [...game.players[0]];
+  const players2 = [...game.players[1]];
+  const [gk1, ...restPlayer1]=players1;
+  const [gk2, ...restPlayer2]=players2;
+  const allplayers = [...game.players[0],...game.players[1]];
+  const playersFinal = [...players1,'Thiango' , 'Coutinho', 'Perisic'];
+  
+  //const [team1 , draw, team2]=[...game.odds];
+const arbPlayer=['hi', 'hello', 'byr','neon'];
+game.printGoals(...arbPlayer);
+*/
+const [players1, players2]= game.players;
+const [gk1, ...restPlayer1]=players1;
+const allplayers = [...players1, ...players2];
+const playersFinal = [...players1,'Thiango' , 'Coutinho', 'Perisic'];
+const {odds : {team1, x:draw, team2}}= game;
+
+  console.log(players1);
+  console.log(players2);
+  console.log(gk1, restPlayer1);
+  //console.log(gk2, restPlayer2);
+  console.log(allplayers);
+  console.log(playersFinal);
+  console.log(team1, draw, team2);
+  team1 > team2 && console.log('Team1 likely to win');
+
+  for (const [i,player] of game.scored.entries()){
+      console.log(`${player} goaled ${i+1} times` );
+  }
+
+
+  const entries = Object.entries(game.odds);
+  let sum=0
+  for (const num of Object.values(game.odds)){
+      sum=sum+num;
+    }
+
+  console.log(sum/entries.length);
+
+  for(const [key, value] of Object.entries(game.odds)){
+      ( key ==='x' )?console.log('tie'):console.log(`${game[key]}, ${value}`);
+  }
+
+console.log(`${game[team1]}`);
