@@ -121,7 +121,7 @@ document.querySelector('.split').addEventListener('click', function() {
 })
 */
 
-
+/*
 const game = {
     team1: 'Bayern Munich',
     team2: 'Borrussia Dortmund',
@@ -172,7 +172,7 @@ const game = {
     }
   };
 
-  /*const players1 = [...game.players[0]];
+  const players1 = [...game.players[0]];
   const players2 = [...game.players[1]];
   const [gk1, ...restPlayer1]=players1;
   const [gk2, ...restPlayer2]=players2;
@@ -183,6 +183,7 @@ const game = {
 const arbPlayer=['hi', 'hello', 'byr','neon'];
 game.printGoals(...arbPlayer);
 */
+/*
 const [players1, players2]= game.players;
 const [gk1, ...restPlayer1]=players1;
 const allplayers = [...players1, ...players2];
@@ -216,3 +217,65 @@ const {odds : {team1, x:draw, team2}}= game;
   }
 
 console.log(`${game[team1]}`);
+*/
+
+
+const gameEvents = new Map([
+    [17, '⚽ GOAL'],
+    [36, '� Substitution'],
+    [47, '⚽ GOAL'],
+    [61, '� Substitution'],
+    [64, '� Yellow card'],
+    [69, '� Red card'],
+    [70, '� Substitution'],
+    [72, '� Substitution'],
+    [76, '⚽ GOAL'],
+    [80, '⚽ GOAL'],
+    [92, '� Yellow card'],
+    ])
+
+    //for (const value of gameEvents.values())
+      //  events.
+        //console.log(events);
+
+    const events =[...new Set(gameEvents.keys()) ];
+    console.log(events);
+    
+    gameEvents.delete(64);
+    console.log(gameEvents);
+
+    for(let i=0; i<=90;i+=9) {
+        for( const keyss of gameEvents.keys())
+            if (keyss>=i && keyss<i+8)
+                console.log(gameEvents.get(keyss));
+    }
+
+
+    console.log(
+        `An event happened, on average, every ${90 / gameEvents.size} minutes`
+      );
+      const time = [...gameEvents.keys()].pop();
+      console.log(time);
+      console.log(
+        `An event happened, on average, every ${time / gameEvents.size} minutes`
+      );
+      
+
+    //console.log(gameEvents.values())
+
+    for(const [time, event] of gameEvents.entries()){
+        time<45?console.log(`first half: ${gameEvents.get(time)}`):console.log(`second half: ${gameEvents.get(time)}`);
+        //console.log(time,event);
+    }
+    for(const [time, event] of gameEvents.entries()){
+        const term= time<45?'First':'Second';
+        console.log(`${term}Half  Event ${time}:${event}`);
+    }
+let cc=[];
+    const camelCase = function(name) {
+       let newName= name.trim().toLowerCase().split('_');
+        for( let n of newName)
+            cc.push(n.replace(n[0], n[0].toUpperCase()));
+       return cc.join("");
+    }
+    console.log(camelCase('  Hi_hih_hih   '));
