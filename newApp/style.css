@@ -33,9 +33,10 @@ transform: translate(-50%, -50%);
 }
 .login input {
     padding: 1rem 3rem;
-    font-size: 1.6em;
+    font-size: 2em;
     text-align: center;
-    width: 20rem;
+    width: 35rem;
+    height: 6rem;
     margin: 1rem;
     border-radius: 10rem;
     border: 1px solid rgba(63, 63, 247, 0.432);
@@ -51,11 +52,15 @@ transform: translate(-50%, -50%);
 .login input::placeholder {
     color: rgba(63, 63, 247, 0.432);
 }
+.login input:hover {
+    border: 1px solid green;
+}
 
 .login_button,
 .register-button {
     border: none;
     background: none;
+    height: 5rem;
     margin: 1rem;
     border-radius: 10rem;
     border: 1px solid rgba(63, 63, 247, 0.432);
@@ -73,6 +78,7 @@ transform: translate(-50%, -50%);
 .register-button:focus {
     outline: none;
     color: green;
+    border: 2px dashed green;
 }
 
 .open-page-register{

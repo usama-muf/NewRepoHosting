@@ -219,7 +219,7 @@ const {odds : {team1, x:draw, team2}}= game;
 console.log(`${game[team1]}`);
 */
 
-
+/*
 const gameEvents = new Map([
     [17, '⚽ GOAL'],
     [36, '� Substitution'],
@@ -279,3 +279,32 @@ let cc=[];
        return cc.join("");
     }
     console.log(camelCase('  Hi_hih_hih   '));
+    */
+
+    dogsJulia =[12,3,1,6,2];
+    dogsKate = [14,2,1,1,6];
+    //console.log(dogsJulia);
+
+    const agedog=dogsJulia.reduce((acc,val,i) => acc+acc+val,0);
+    agedog=agedog/
+    console.log(agedog);
+
+   const checkDogs = function (dogsJulia, dogsKate) {
+      const dogsJuliaCorrected = dogsJulia.slice(1,3);
+        const allDogsAge =[...dogsJuliaCorrected,...dogsKate];
+
+         allDogsAge
+        .map(function(val,i){
+        if (val<5)
+         console.log(`Dog number ${i+1} is still a puppy`);
+        else
+         console.log(`Dog number ${i+1} is an adult, and is 5 years old`);
+        });
+
+    }
+    
+    const clacAverageHumanAge = function (allDogsAge) {
+       const ageInHuman=[];
+
+    }
+checkDogs(dogsJulia,dogsKate);

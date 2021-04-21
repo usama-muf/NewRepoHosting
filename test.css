@@ -56,6 +56,37 @@ p {
     z-index: 10;
 }
 .active {
+
     opacity: .3;
     backdrop-filter: blur(8px);
 }
+
+
+.app {
+    border: 1px dashed rebeccapurple;
+    margin: 4rem;
+    position: relative;
+    display: grid;
+    max-width: 100rem;
+    max-height: 40rem;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows:auto repeat(3,15rem) auto;
+    gap: 2rem;
+}
+
+.menu_items {
+    grid-column: 1/span 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.movements {
+    display: flex;
+    border: 1px dotted red;
+}
+/*.menuitem {
+    display: flex;
+    
+}
+*/
