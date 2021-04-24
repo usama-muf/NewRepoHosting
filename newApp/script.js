@@ -23,15 +23,23 @@ const buttonLogin = document.querySelector('.login_button');
 let currentAccount;
 buttonLogin.addEventListener('click', function (e) {
     e.preventDefault();
+    let html='';
     currentAccount= accounts.find(account => account.username===inputLoginUser.value) 
-
     if (currentAccount?.password === Number(inputLoginPassword.value)) {
         window.open("admin.html","_parent");
-        inputLoginUser.textContent="";
-        inputLoginPassword.textContent="";  
+        inputLoginUser.value="";
+        inputLoginPassword.value="";
     }
     else {
-        alert("❌ Either Username or Password is Incorrect ❌")
+        html =`
+        <div>
+            <p style="font-size: 2rem; text-align: center; color: rgba(235, 11, 11, 0.719);">Either Your Username or Password is Wrong</p>
+        </div>`;
+        buttonLogin.insertAdjacentHTML('afterend',html);
+        inputLoginUser.value="";
+        inputLoginPassword.value="";  
+
+        //alert("❌ Either Username or Password is Incorrect ❌");
     }
     
 });

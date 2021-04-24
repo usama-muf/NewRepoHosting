@@ -83,6 +83,7 @@ transform: translate(-50%, -50%);
 
 .open-page-register{
     display: grid;
+    text-align: center;
 }
 .open-page-register p {
     font-size: 3rem;
