@@ -213,57 +213,23 @@ display: block;
 
 /*Skills section start*/
 
-.skills-header {
-    padding-top: 10rem;
-    margin-top: 10rem;
-/*    border: 1px dashed yellow;
-*/    position:relative;
+
+.section-skills {
+    height: 65vh;
+}
+.skills-sec{
+    display: grid;
+    /*grid-template-columns:1fr 400px 400px 400px 1fr;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:200px  200px;
+    gap: 3rem;
+    place-items: center;
+    height: 50vh;
+    margin-top: 5vh;
+
 }
 
-.skills-sec-1 {
-    margin-top: 1rem;
-    line-height: 2rem;
-    display:flex;
-    font-size: 1.0em;
-    align-items: center;
-    justify-content:center;
-/*    border: 1px solid black;*/
-}
-.sec-1-icon {
-    flex:10%;
-    /*border: 2px dotted blue;*/
-}
 
-.skills-sec-2 {
-    margin-top: 1rem;
-    line-height: 2rem;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    /*border: 1px solid black;*/
-}
-.sec-2-icon {
-    flex:10%;
-/*    border: 2px dotted blue;
-*/}
-
-.skills-sec-3 {
-    margin-top: 1rem;
-    line-height: 2rem;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    padding-left:15%;
-    padding-right: 15%;
-    
-/*    border: 1px solid black;
-padding-left:25%;
-    padding-right: 25%;
-*/}
-.sec-3-icon {
-    flex:10%;
-/*    border: 2px dotted blue;
-*/}
 
 /* Project section starts*/
 
@@ -465,3 +431,4 @@ footer {
 
    
 }*/
+
