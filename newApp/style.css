@@ -169,9 +169,6 @@ Form working
 .sidebar .form .form__row {
   margin-bottom: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
   margin: 1rem;
   /*
 
@@ -188,11 +185,11 @@ Form working
 
 .sidebar .form .form__row input,
 .form__row select {
-  width: 80%;
+  width: 20rem;
   position: relative;
   outline: none;
   resize: none;
-  margin-left: 50px;
+  margin-left: 10rem;
   border-radius: 10px;
   padding: 8px 10px;
 }
@@ -216,7 +213,7 @@ Form working
 }
 
 .sidebar .form .form__row input:hover {
-  border: 3px solid green;
+  background-color: rgb(220, 220, 220, 0.2);
 }
 .sidebar .form .form__row input:focus {
   outline: none;
@@ -229,11 +226,6 @@ Form working
 .form.hidden {
   transform: translateY(-30rem);
   opacity: 0;
-}
-.form__label {
-  flex: 0 0 10%;
-  font-size: 1.5em;
-  font-weight: 600;
 }
 
 .hidden {
