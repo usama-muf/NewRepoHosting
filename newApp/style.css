@@ -11,9 +11,13 @@ html {
 body {
   color: grey;
   background-color: white;
-  height: 10vh;
+  border: 1px solid blue;
+  height: 100%;
   padding: 2rem;
-  /*overscroll-behavior-y: none;*/
+  overscroll-behavior-y: none;
+
+  /*
+  */
 }
 
 .open_page {
@@ -27,6 +31,10 @@ body {
 }
 .login {
   display: grid;
+  margin-top: 100vh;
+  /*
+  justify-content: center;
+  */
 }
 .login input {
   padding: 1rem 3rem;
@@ -80,14 +88,13 @@ body {
 .open-page-register {
   display: grid;
   text-align: center;
+  margin-top: 100vh;
+  /*
+  */
 }
 .open-page-register p {
   font-size: 3rem;
   margin: 1rem;
-}
-
-.hidden {
-  display: none;
 }
 
 /*
@@ -100,9 +107,15 @@ Sidebar
 .main__content {
   display: flex;
   border: 1px dashed red;
-  height: 100vh;
+  height: 94vh;
+
+  /*
+  
+  padding: 3rem 4rem 3rem 5rem;
+  position: relative;
   overflow: hidden;
   overscroll-behavior-y: none;
+  */
 }
 
 .sidebar {
@@ -113,6 +126,7 @@ Sidebar
   flex-direction: column;
   color: rebeccapurple;
   padding: 3rem;
+  justify-content: center;
 }
 
 .details {
@@ -129,16 +143,56 @@ Form working
 .form {
   border-radius: 5px;
   border: 1px dashed blue;
-  padding: 1.5rem;
   display: grid;
   place-content: center;
-  place-items: center;
   transition: all 0.5s, transform 1ms;
+
+  /*
+  
+  place-items: center;
+  */
 }
-.form__row {
+.sidebar .form .form__row {
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
+  /*
+
+*/
+}
+
+.sidebar .form .form__row label {
+  width: 200px;
+  margin-right: 14px;
+  font-size: 14px;
+}
+
+.sidebar .form .form__row input {
+  width: 100%;
+  outline: none;
+  resize: none;
+  padding: 8px 10px;
+}
+
+.sidebar .form .form__input--type {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+
+.sidebar .form .form__input--type:before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.sidebar .form .form__input--type select {
+  outline: none;
+  height: 100%;
+  border: 1px solid red;
+}
+.sidebar .form .form__row input :focus {
+  border: 4px solid blue;
 }
 .form.hidden {
   transform: translateY(-30rem);
@@ -148,4 +202,20 @@ Form working
   flex: 0 0 10%;
   font-size: 1.5em;
   font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar .form .form__row {
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid red;
+  }
+  .sidebar .form .form__label {
+    margin-bottom: 15px;
+    border: 2px solid red;
+  }
 }
