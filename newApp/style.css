@@ -247,14 +247,17 @@ Form working
 */
 @media screen and (max-width: 600px) {
   .main__content {
-    display: grid;
+    display: table;
     border: 1px dashed red;
     height: 94vh;
   }
+  .main__content div:nth-child(1) {
+    display: table-footer-group;
+  }
   #map {
     height: 100vh;
-    width: 100%;
-    border: 2px solid lightskyblue;
+    width: 50vh;
+    border: 2px solid green;
   }
   .sidebar {
     border: 2px dashed darkblue;
