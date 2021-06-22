@@ -12,7 +12,6 @@ html {
 body {
   color: grey;
   background-color: white;
-  border: 1px solid blue;
   height: 100%;
   padding: 2rem;
   overscroll-behavior-y: none;
@@ -192,6 +191,7 @@ Form working
   margin-left: 10rem;
   border-radius: 10px;
   padding: 8px 10px;
+  box-shadow: 1px 1px 1px;
 }
 
 .sidebar .form .form__input--type {
@@ -218,6 +218,8 @@ Form working
 .sidebar .form .form__row input:focus {
   outline: none;
   border: 2px solid rgb(128, 113, 113);
+  background-color: rgba(150, 160, 169, 0.467);
+  font-size: 16px;
 }
 .sidebar .form .form__row input::placeholder {
   color: green;
@@ -246,9 +248,20 @@ Form working
 
 */
 @media screen and (max-width: 600px) {
+  .open_page {
+    display: grid;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+  }
+
+  .open-page-register {
+    padding-top: 4rem;
+  }
+
   .main__content {
     display: table;
-    border: 3px dashed red;
     height: 94vh;
     width: 100%;
     justify-content: center;
@@ -272,6 +285,7 @@ Form working
     color: rebeccapurple;
     padding: 3rem;
     justify-content: center;
+    box-shadow: 5px 3px 6px;
   }
 
   .main__content .title__sidebar {
@@ -288,13 +302,23 @@ Form working
   }
   .sidebar .form .form__row label {
     width: 100%;
-    padding-bottom: 1rem;
+    color: crimson;
+    font-size: 16px;
+    padding-bottom: 3px;
   }
   .sidebar .form .form__row input,
   .sidebar .form .form__input--type {
     margin-left: 0%;
     width: 100%;
     height: 40px;
+    border: 1px solid rebeccapurple;
+    box-shadow: 1px 5px 15px 1px #888888;
+  }
+  .form__input--submit {
+    margin-top: 20px;
+    font-size: 20px;
+    padding-top: 10px;
+    border: 2px solid red;
   }
 }
 /*
@@ -309,7 +333,7 @@ Form working
 //
 
 
-*/
+*/ /*
 
 .wrapper {
   flex-basis: 45rem;
@@ -479,3 +503,4 @@ Form working
     flex-direction: row;
   }
 }
+*/
