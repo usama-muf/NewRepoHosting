@@ -251,7 +251,11 @@ Form working
     border: 1px dashed red;
     height: 94vh;
   }
-
+  #map {
+    height: 100vh;
+    width: 100%;
+    border: 2px solid lightskyblue;
+  }
   .sidebar {
     border: 2px dashed darkblue;
     background-color: rgba(199, 192, 128, 0.685);
