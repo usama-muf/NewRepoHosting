@@ -139,6 +139,8 @@ border: 1px solid yellow;
 .sidebar {
   flex-basis: 45rem;
   border: 2px dashed darkblue;
+  background-color: #2d3439;
+
   display: flex;
   flex-direction: column;
   color: rebeccapurple;
@@ -175,11 +177,12 @@ Form working
 }
 
 .sidebar .form .form__row label {
-  width: 0;
+  width: 0%;
   margin-left: 10%;
-  margin-right: 10px;
-  font-size: 18px;
+  margin-right: 0px;
+  font-size: 17px;
   font-family: sans-serif;
+  color: rgba(242, 236, 236, 0.897);
 }
 
 .sidebar .form .form__row input,
@@ -194,10 +197,10 @@ Form working
   box-shadow: 1px 1px 1px;
 }
 
-.sidebar .form .form__input--type {
+.form__input--type {
   position: relative;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
 }
 
 .sidebar .form .form__input--type:before {
@@ -213,7 +216,7 @@ Form working
 }
 
 .sidebar .form .form__row input:hover {
-  background-color: rgb(220, 220, 220, 0.2);
+  background-color: rgba(162, 160, 160, 0.1);
 }
 .sidebar .form .form__row input:focus {
   outline: none;
@@ -225,7 +228,13 @@ Form working
   color: green;
 }
 
-.form.hidden {
+.form__input--submit {
+  cursor: pointer;
+  outline: none;
+  transform: scale(0.7, 0.7);
+}
+
+.form .hidden {
   transform: translateY(-30rem);
   opacity: 0;
 }
@@ -288,9 +297,8 @@ Form working
     box-shadow: 5px 3px 6px;
   }
 
-  .main__content .title__sidebar {
+  .title__sidebar {
     font-size: 30px;
-    text-align: center;
     padding: 0rem;
   }
   .form {
