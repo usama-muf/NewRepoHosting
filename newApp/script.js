@@ -54,27 +54,27 @@ buttonRegister.addEventListener("click", function (event) {
 });
 
 //Leaflet library starts
+if (navigator.geolocation)
+  navigator.geolocation.getCurrentPosition(
+    function (position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
 
-navigator.geolocation.getCurrentPosition(
-  function (position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+      const coords = [latitude, longitude];
 
-    const coords = [latitude, longitude];
+      const map = L.map("map").setView(coords, 13);
 
-    var map = L.map("map").setView(coords, 13);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
-
-    L.marker(coords)
-      .addTo(map)
-      .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
-      .openPopup();
-  },
-  function () {
-    alert("cannot fetch location");
-  }
-);
+      L.marker(coords)
+        .addTo(map)
+        .bindPopup("A pretty CSS3 popup.<br> Easily customizable.")
+        .openPopup();
+    },
+    function () {
+      alert("cannot fetch location");
+    }
+  );

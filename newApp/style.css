@@ -118,14 +118,12 @@ Sidebar
   */
 }
 
-/*
-  
-  margin: 20px auto;
-  */
+#map {
+  height: 100%;
+  width: 100%;
+  border: 2px solid green;
+}
 .main__content .title__sidebar {
-  /*
-border: 1px solid yellow;
-*/
   font-size: 30px;
   text-align: center;
   padding: 1rem 3rem 2rem 3rem;
