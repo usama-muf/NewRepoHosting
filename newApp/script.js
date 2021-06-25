@@ -78,3 +78,7 @@ if (navigator.geolocation)
       alert("cannot fetch location");
     }
   );
+
+function checkForm(form) {
+  return true;
+}
