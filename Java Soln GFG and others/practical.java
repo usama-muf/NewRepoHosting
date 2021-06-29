@@ -1,3 +1,262 @@
+//Search a 2D Matrix
+//Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+//Integers in each row are sorted from left to right.
+//The first integer of each row is greater than the last integer of the previous row.
+
+import java.util.*;
+public class Main
+{
+    static boolean check(int[][] arr, int len , int bre, int target) {
+        
+	    for(int i=0; i<arr.length ; i++) {
+	        if(target<arr[i][bre-1] && target>arr[i][0]) {
+	            if(Arrays.binarySearch(arr[i], target)>=0)
+	                return true;
+	        }
+	        
+	        else if(target==arr[i][bre-1] || target==arr[i][0])
+	            return true;
+	    }
+	    return false;
+    }
+	public static void main(String[] args) {
+	    int[][] arr = {{-10,-3,5,7},{10,11,16,20},{23,30,34,60}};
+	    int len = arr.length;
+	    int bre = arr[0].length;
+	    int target = 0;
+	    
+	    boolean result = check(arr, len,bre, target);
+	    
+	    
+	    System.out.println(result);
+		System.out.println("Hello World");
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Spirally traversing a matrix
+
+class Solution
+{
+    //Function to return a list of integers denoting spiral traversal of matrix.
+    static ArrayList<Integer> spirallyTraverse(int arr[][], int r, int c)
+    {
+         ArrayList<Integer> al = new ArrayList<>();
+           int rowBegin = 0;
+           int columnBegin = 0;
+           int rowEnd= arr.length;
+           int columnEnd = arr[0].length;
+           
+           while(rowBegin<rowEnd && columnBegin<columnEnd)  {
+                    
+               for(int i=columnBegin ; i<columnEnd ; i++ ) {
+                   al.add(arr[rowBegin][i]);
+                }
+                   rowBegin++;
+                
+                for(int i=rowBegin ; i<rowEnd ; i++) {
+                    al.add(arr[i][columnEnd-1]);
+                }
+                    columnEnd--;
+                
+                
+                if(rowBegin< rowEnd)
+                for(int i=columnEnd-1 ; i>=columnBegin ; i--) {
+                    al.add(arr[rowEnd-1][i]);
+                }
+                    rowEnd--;
+                
+                
+                if(columnBegin< columnEnd)
+                for(int i=rowEnd-1 ; i>=rowBegin ; i--) {
+                    al.add(arr[i][columnBegin]);
+                }
+                    columnBegin++;
+           }    
+           return al;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Single Number
+//Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+//You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+using xor 
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Minimum swaps and K together 
+//Given an array of n positive integers and a number k. 
+//Find the minimum number of swaps required to bring all the numbers less than or equal to k together.
+
+import java.math.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr={8,16,4,3,2,12,36,5,14};
+		int n = arr.length;
+		int sc = 0;
+		int count=0;
+		int bad=0;
+		int k=14;
+		for(int i=0; i<n ; i++) {
+		    if(arr[i]<=k)
+		        ++count;
+		}
+		
+		for(int i=0; i<count; i++) {
+		    if(arr[i]>k) 
+		        ++sc;
+		}
+		
+		bad = sc;
+		for(int i=0; i<n-count ; i++) {
+		    if(arr[i]>k)
+		        --bad;
+		        
+		    if(arr[i+count]> k) 
+		        ++bad;
+		        
+		  sc = Math.min(bad, sc);
+        }
+		System.out.println(sc);
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Three way partitioning 
+//Given an array of size n and a range [a, b]. 
+//The task is to partition the array around the range such that array is divided into three parts.
+//1) All elements smaller than a come first.
+//2) All elements in range a to b come next.
+//3) All elements greater than b appear in the end.
+
+
+
+import java.util.*;
+public class Main
+{
+    static void swap(int[] array, int a, int b) {
+        int temp=array[a];
+        array[a]=array[b];
+        array[b]=temp;
+        
+        
+    }
+	public static void main(String[] args) {
+	    /*int[] array = {87, 78, 16, 94};
+	    int a=36, b=72;
+	    */
+	    int[] array = {76, 8, 75, 22, 59, 96, 30, 38, 36};
+	    int a=44, b=62;
+	    
+	    
+	    
+	    System.out.println(Arrays.toString(array));
+	    int start = 0,mid=0;
+        int end = array.length-1;
+        
+        while(mid<=end) {
+            if(array[mid]<a) {
+                swap(array , start,mid);
+                System.out.println("less than a");
+                start++;
+                mid++;
+            }
+            else if(array[mid]>b) {
+                swap(array , mid , end);
+                System.out.println("greater than b");
+                end--;
+            }
+            else {
+                
+                mid++;
+            }
+            
+        } 
+		System.out.println(Arrays.toString(array));
+	}
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Chocolate Distribution Problem 
+//Given an array A[ ] of positive integers of size N, where each value represents the number of chocolates in a packet. 
+//Each packet can have a variable number of chocolates. 
+//There are M students, the task is to distribute chocolate packets among M students such that :
+//1. Each student gets exactly one packet.
+//2. The difference between maximum number of chocolates given to a student and minimum number of chocolates given to a student is minimum.
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    ArrayList<Long> al = new ArrayList<Long>();
+    long n=8;
+    long m=5;
+    
+    long min = Long.MAX_VALUE;
+    al.add(new Long(3));
+    al.add(new Long(4));
+    al.add(new Long(1));
+    al.add(new Long(9));
+    al.add(new Long(56));
+    al.add(new Long(7));
+    al.add(new Long(9));
+    al.add(new Long(12));
+    Collections.sort(al);
+    System.out.println(al);
+    for(int l=0 ; l<=n-m ; l++) {
+        if((al.get((int)(l+m-1))-al.get(l))<min)
+            min = al.get((int)(l+m-1))-al.get(l);
+    }
+    
+    
+    System.out.println(min);
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Find the triplet that sum to a given value
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        int[] arr={890 ,479 ,884 ,926 ,266, 261, 46 ,779 ,822 ,856 ,521, 928 ,774 ,135 ,252 ,676 ,337 ,335, 2 ,738 ,311 ,975 ,591 ,357 ,72 ,81 ,936 ,146, 283
+};      Arrays.sort(arr);
+	    int X=647;
+	    System.out.println(Arrays.toString(arr));
+	    
+	    for(int i=0; i< arr.length ; i++) {
+	        int sp = i+1 , ep = arr.length-1;
+	        
+	        while(sp<ep) {
+	            if(arr[i]+arr[sp]+arr[ep]==X)
+	                System.out.println("Found a match at"+i+" "+sp+" "+ep);
+	            if(arr[i]+arr[sp]+arr[ep]>X)
+	                --ep;
+	            if(arr[i]+arr[sp]+arr[ep]<X)
+	                ++sp;
+	        }
+	    }
+	    
+	}
+}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Array Subset of another array 
