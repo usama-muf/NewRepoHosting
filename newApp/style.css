@@ -120,7 +120,7 @@ Sidebar
 
 #map {
   height: 100%;
-  width: 100%;
+  width: 100% !important;
   border: 2px solid green;
 }
 .main__content .title__sidebar {

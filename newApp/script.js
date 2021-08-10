@@ -51,6 +51,8 @@ buttonRegister.addEventListener("click", function (event) {
   event.preventDefault();
   openPage.classList.add("hidden");
   mainContent.classList.remove("hidden");
+  //map.invalidateSize();
+  window.dispatchEvent(new Event("resize"));
 });
 //
 
@@ -63,9 +65,15 @@ if (navigator.geolocation)
 
       const coords = [latitude, longitude];
 
-      const map = L.map("map");
-      map.setView(coords, 15);
-
+      const map = L.map("map", {
+        maxZoom: 18,
+        minZoom: 13,
+      }).setView(coords, 15);
+      /*map.on("load", function () {
+        setTimeout(() => {
+          map.invalidateSize();
+        }, 1000);
+      });*/
       L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
