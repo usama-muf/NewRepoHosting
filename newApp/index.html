@@ -49,92 +49,100 @@
     <d  iv class="main__content hidden">
       <div class="sidebar">
         <ul class="details">
+          <h1>___________XXXXXXXXXXXXXXXXXX___________</h1>
           <div class="title__sidebar">Complaint Form</div>
-          <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSe0qHJF2IJNmEJnRJYc1fvMTAJA0LPO6sqGz9eG6RHxN_tidQ/viewform?usp=sf_link"
-          target="hidden_iframe" method="GET" >
-            <!--hidden-->
-
-            <div class="form__row">
+          <form class="form" onsubmit="submitMessage(); return false;" action="" method="" enctype="" >
+            
+            <!--
+              <div class="form__row">
               <label class="form__label">Type</label>
-              <select name="entry.1771167936" id="entry.1771167936" class="form__input form__input--type">
-                <option for="entry.1771167936" value="water">Water Leakage</option>
-                <option for="entry.1771167936" value="garbage">Garbage Collection</option>
+              <select name="" id="" class="form__input form__input--type">
+                <option for="" value="water">Water Leakage</option>
+                <option for="" value="garbage">Garbage Collection</option>
               </select>
             </div>
+            -->
 
             <div class="form__row">
-              <label for="" class="form__label">Name</label>
+              <label for="name" class="form__label">Name</label>
               <input
                 type="text"
-                name="entry.2089277984"
-                id="entry.2089277984"
+                name="name"
+                id="name"
+                value=""
                 class="form__input form__input--name"
               />
             </div>
 
             <div class="form__row">
-              <label for="" class="form__label">Street</label>
+              <label for="street" class="form__label">Email Street</label>
               <input
                 type="text"
-                name="entry.245336126"
-                id="entry.245336126"
+                name="street"
+                id="street"
+                value=""
                 class="form__input form__input--street"
               />
             </div>
             <div class="form__row">
-              <label for="" class="form__label">Area</label>
+              <label for="area" class="form__label">Message  Area</label>
               <input
                 type="text"
-                name="entry.673860635"
-                id="entry.673860635"
+                name="area"
+                id="area"
+                value=""
                 class="form__input form__input--area"
               />
             </div>
-
-            <div class="form__row">
-              <label for="" class="form__label">City</label>
-              <input
+              
+              <div class="form__row">
+                <label for="city" class="form__label">City</label>
+                <input
                 type="text"
-                name="entry.1806778607"
-                id="entry.1806778607"
+                name="city"
+                id="city"
                 class="form__input form__input--city"
               />
             </div>
-
+            
             <div class="form__row">
-              <label for="" class="form__label">PinCode</label>
+              <label for="pincode" class="form__label">PinCode</label>
               <input
-                type="number"
-                name="entry.592078913"
-                id="entry.592078913"
+              type="text"
+                name="pincode"
+                id="pincode"
                 class="form__input form__input--pincode"
               />
             </div>
 
             <div class="form__row">
-              <label for="" class="form__label">Mobile No:</label>
+              <label for="mobile" class="form__label">Mobile No:</label>
               <input
-                type="number"
-                name="entry.1467821235"
-                id="entry.1467821235"
+                type="text"
+                name="mobile"
+                id="mobile"
                 class="form__input form__input--name"
-              />
+                />
             </div>
-
-            <div class="form__row">
-              <input type="file" id="" name="filename">
+            <!--<div class="form__row">
+              <label for="file">Add Photos</label>
+              <input type="file" id="photo" name="photo">
             </div>
-
+            <input type="submit" value="submit">
+            
+            -->
+            
             <div class="form__row">
               <input
                 type="submit"
-                name=""
-                id=""
+                name="submit"
+                id="submit"
                 class="form__input form__input--submit"
-              />
+                />
             </div>
+         
+            
           </form>
-<!--<iframe name="hidden_iframe" style="display: none;" src="" frameborder="0" onload="if(submitted){}"></iframe>-->          
         </ul>
       </div>
 
@@ -142,74 +150,3 @@
     </div>
   </body>
 </html>
-
-<!--
-  https://docs.google.com/forms/d/e/1FAIpQLSe0qHJF2IJNmEJnRJYc1fvMTAJA0LPO6sqGz9eG6RHxN_tidQ/viewform?usp=pp_url&entry.1771167936=Water+Leakage&entry.2089277984=Usama&entry.245336126=stree&entry.673860635=area&entry.1806778607=city&entry.592078913=pincode&entry.1467821235=number
-https://docs.google.com/forms/d/e/1FAIpQLSe0qHJF2IJNmEJnRJYc1fvMTAJA0LPO6sqGz9eG6RHxN_tidQ/viewform?usp=pp_url&entry.1771167936=Garbage+Collection&entry.2089277984=dsfsdafsdf&entry.245336126=dfdsfsdaafdsa&entry.673860635=fsdfdsfdsafdsafsda&entry.1806778607=fkjsdalkfjasdlkfjdsl&entry.592078913=226001&entry.1467821235=999999999
-
-  <div class="wrapper">
-    <div class="title">
-      Registration Form
-    </div>
-
-    <div class="form">
-    
-      <div class="inputfield">
-          <label>First Name</label>
-          <input type="text" class="input">
-       </div>  
-    
-       <div class="inputfield">
-          <label>Last Name</label>
-          <input type="text" class="input">
-       </div>  
-    
-       <div class="inputfield">
-          <label>Password</label>
-          <input type="password" class="input">
-       </div>  
-    
-       <div class="inputfield">
-          <label>Confirm Password</label>
-          <input type="password" class="input">
-       </div> 
-        <div class="inputfield">
-          <label>Gender</label>
-          <div class="custom_select">
-            <select>
-              <option value="">Select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-       </div> 
-        <div class="inputfield">
-          <label>Email Address</label>
-          <input type="text" class="input">
-       </div> 
-      <div class="inputfield">
-          <label>Phone Number</label>
-          <input type="text" class="input">
-       </div> 
-      <div class="inputfield">
-          <label>Address</label>
-          <textarea class="textarea"></textarea>
-       </div> 
-      <div class="inputfield">
-          <label>Postal Code</label>
-          <input type="text" class="input">
-       </div> 
-      <div class="inputfield terms">
-          <label class="check">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <p>Agreed to terms and conditions</p>
-       </div> 
-      <div class="inputfield">
-        <input type="submit" value="Register" class="btn">
-      </div>
-    </div>
-</div>	
-
--->

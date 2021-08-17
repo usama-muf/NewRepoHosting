@@ -52,7 +52,7 @@ buttonRegister.addEventListener("click", function (event) {
   openPage.classList.add("hidden");
   mainContent.classList.remove("hidden");
   //map.invalidateSize();
-  window.dispatchEvent(new Event("resize"));
+  window.dispatchEvent(new Event("resize")); // Resize window when register button is clicked
 });
 //
 
@@ -89,3 +89,34 @@ if (navigator.geolocation)
       alert("cannot fetch location");
     }
   );
+
+//AWS related Function
+
+async function submitMessage() {
+  var name = document.getElementById("name").value;
+  var street = document.getElementById("street").value;
+  var area = document.getElementById("area").value;
+  var city = document.getElementById("city").value;
+  var pincode = document.getElementById("pincode").value;
+  var mobile = document.getElementById("mobile").value;
+
+  fetch(
+    "https://wqvg69mlyf.execute-api.ap-south-1.amazonaws.com/production/message",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        name: name,
+        street: street,
+        area: area,
+        city: city,
+        pincode: pincode,
+        mobile: mobile,
+      }),
+    }
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      console.log(response);
+      // document.getElementById("messages").innerHTML += "<p>" + message + "</p>"; // Add new message to message list
+    });
+}
