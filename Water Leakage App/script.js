@@ -21,6 +21,13 @@ const inputLoginPassword = document.querySelector(".login_input--password");
 const buttonLogin = document.querySelector(".login_button");
 const buttonRegister = document.querySelector(".register-button");
 
+const name = document.getElementById("name").value;
+const street = document.getElementById("street").value;
+const area = document.getElementById("area").value;
+const city = document.getElementById("city").value;
+const pincode = document.getElementById("pincode").value;
+const mobile = document.getElementById("mobile").value;
+
 let currentAccount;
 //Login button working: when clicked a new webpage will open for future database addition
 buttonLogin.addEventListener("click", function (e) {
@@ -55,7 +62,6 @@ buttonRegister.addEventListener("click", function (event) {
   window.dispatchEvent(new Event("resize")); // Resize window when register button is clicked
 });
 //
-
 //Leaflet library starts
 if (navigator.geolocation)
   navigator.geolocation.getCurrentPosition(
@@ -91,15 +97,7 @@ if (navigator.geolocation)
   );
 
 //AWS related Function
-
 async function submitMessage() {
-  var name = document.getElementById("name").value;
-  var street = document.getElementById("street").value;
-  var area = document.getElementById("area").value;
-  var city = document.getElementById("city").value;
-  var pincode = document.getElementById("pincode").value;
-  var mobile = document.getElementById("mobile").value;
-
   fetch(
     "https://wqvg69mlyf.execute-api.ap-south-1.amazonaws.com/production/message",
     {
@@ -113,10 +111,24 @@ async function submitMessage() {
         mobile: mobile,
       }),
     }
-  )
-    .then((response) => response.json())
-    .then((response) => {
-      console.log(response);
-      // document.getElementById("messages").innerHTML += "<p>" + message + "</p>"; // Add new message to message list
-    });
+  );
+  thankYou();
+  /*.then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        // document.getElementById("messages").innerHTML += "<p>" + message + "</p>"; // Add new message to message list
+      });*/
+}
+
+function thankYou() {
+  alert("ThankYou, Your form is submitted. We will get back to you soon");
+  cleanValues();
+}
+function cleanValues() {
+  document.querySelector("#name").value = "";
+  document.querySelector("#street").value = "";
+  document.querySelector("#area").value = "";
+  document.querySelector("#city").value = "";
+  document.querySelector("#pincode").value = "";
+  document.querySelector("#mobile").value = "";
 }
