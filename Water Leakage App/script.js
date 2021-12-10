@@ -21,12 +21,15 @@ const inputLoginPassword = document.querySelector(".login_input--password");
 const buttonLogin = document.querySelector(".login_button");
 const buttonRegister = document.querySelector(".register-button");
 
-const name = document.getElementById("name").value;
+const name = document.getElementById("pname").value;
 const street = document.getElementById("street").value;
 const area = document.getElementById("area").value;
 const city = document.getElementById("city").value;
 const pincode = document.getElementById("pincode").value;
 const mobile = document.getElementById("mobile").value;
+let lat = 0;
+let lng = 0;
+//let coords = [latitude, longitude];
 
 let currentAccount;
 //Login button working: when clicked a new webpage will open for future database addition
@@ -66,29 +69,59 @@ buttonRegister.addEventListener("click", function (event) {
 if (navigator.geolocation)
   navigator.geolocation.getCurrentPosition(
     function (position) {
-      const { latitude } = position.coords;
-      const { longitude } = position.coords;
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
 
+      lat = latitude;
+      lng = longitude;
       const coords = [latitude, longitude];
 
       const map = L.map("map", {
         maxZoom: 18,
-        minZoom: 13,
-      }).setView(coords, 15);
-      /*map.on("load", function () {
-        setTimeout(() => {
-          map.invalidateSize();
-        }, 1000);
-      });*/
+        minZoom: 8,
+        closePopupOnClick: false,
+        zoomAnimation: true,
+      }).setView(coords, 16);
+
       L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
 
+      L.circle(coords, {
+        color: "#2b282883",
+        fillColor: "##d16882",
+        fillOpacity: 0.3,
+        radius: 100,
+      }).addTo(map);
+
       map.on("click", function (mapEvent) {
         console.log(mapEvent);
-        const { lat, lng } = mapEvent.latlng;
-        L.marker([lat, lng]).addTo(map).bindPopup("OK").openPopup();
+        L.marker([lat, lng], { opacity: 0 });
+        lat = mapEvent.latlng.lat;
+        lng = mapEvent.latlng.lng;
+
+        console.log(mapEvent.latlng);
+        var popup = L.popup({
+          maxWidth: 200,
+          autoClose: false,
+          closeButton: false,
+          closeOnClick: false,
+        });
+        L.marker([lat, lng], { riseOnHower: true })
+
+          .bindPopup(popup)
+          /*L.popup({
+              maxWidth: 200,
+              autoClose: false,
+              closeButton: false,
+              closeOnClick: true,
+            })*/
+
+          .setPopupContent("You have selected this location")
+          .addTo(map)
+
+          .openPopup();
       });
     },
     function () {
@@ -109,15 +142,19 @@ async function submitMessage() {
         city: city,
         pincode: pincode,
         mobile: mobile,
+        //latitude: lat,
+        //longitude: lng,
       }),
     }
-  );
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      console.log(response);
+      // document.getElementById("messages").innerHTML += "<p>" + message + "</p>"; // Add new message to message list
+    });
+  console.log(lat);
+  console.log(lng);
   thankYou();
-  /*.then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-        // document.getElementById("messages").innerHTML += "<p>" + message + "</p>"; // Add new message to message list
-      });*/
 }
 
 function thankYou() {
@@ -125,7 +162,7 @@ function thankYou() {
   cleanValues();
 }
 function cleanValues() {
-  document.querySelector("#name").value = "";
+  document.querySelector("#pname").value = "";
   document.querySelector("#street").value = "";
   document.querySelector("#area").value = "";
   document.querySelector("#city").value = "";

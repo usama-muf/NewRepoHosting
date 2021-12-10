@@ -17,7 +17,7 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="open_page">
+    <div class="open_page hidden" >
       <div class="open_page_form">
         <form class="login" method="GET">
           <input
@@ -46,10 +46,10 @@
       </div>
     </div>
 
-    <d  iv class="main__content hidden">
+    <div class="main__content">
       <div class="sidebar">
         <ul class="details">
-          <h1>___________XXXXXXXXXXXXXXXXXX___________</h1>
+          
           <div class="title__sidebar">Complaint Form</div>
           <form class="form" onsubmit="submitMessage(); return false;" action="" method="" enctype="" >
             
@@ -64,11 +64,11 @@
             -->
 
             <div class="form__row">
-              <label for="name" class="form__label">Name</label>
+              <label for="pname" class="form__label">Name</label>
               <input
                 type="text"
-                name="name"
-                id="name"
+                name="pname"
+                id="pname"
                 value=""
                 class="form__input form__input--name"
               />
