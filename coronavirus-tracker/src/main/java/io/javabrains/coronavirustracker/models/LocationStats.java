@@ -1,6 +1,7 @@
 package io.javabrains.coronavirustracker.models;
 
 public class LocationStats {
+    private int count;
     private  String state;
     private  String country;
     private int latestTotalCases;
@@ -8,6 +9,14 @@ public class LocationStats {
     private int totalVaccinations;
     private int peopleVaccinated;
     private int peopleFullyVaccinated;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public String getState() {
         return state;
@@ -68,7 +77,8 @@ public class LocationStats {
     @Override
     public String toString() {
         return "LocationStats{" +
-                "state='" + state + '\'' +
+                "count=" + count +
+                ", state='" + state + '\'' +
                 ", country='" + country + '\'' +
                 ", latestTotalCases=" + latestTotalCases +
                 ", changePreviousDay=" + changePreviousDay +

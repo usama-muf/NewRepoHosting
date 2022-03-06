@@ -47,6 +47,7 @@ public class CoronaVirusDataService {
 
         Iterable<CSVRecord> records = CSVFormat.RFC4180.parse(csvBodyReader);
         boolean counter = false;
+        int count=1;
         for (CSVRecord record : records) {
             if(counter && record.get(1)!=""){
                 LocationStats locationStat = new LocationStats();
@@ -62,7 +63,7 @@ public class CoronaVirusDataService {
                 if(record.get(5)!="")
                     tempSecondTestCases = Double.parseDouble(record.get(5));
                 int secondLatestCases  = (int)tempSecondTestCases;
-
+                locationStat.setCount(count++);
                 locationStat.setLatestTotalCases(latestCases);
                 locationStat.setChangePreviousDay(secondLatestCases);
                 locationStat.setTotalVaccinations((record.get(34)==""?((int)Double.parseDouble("0")):(int)Double.parseDouble(record.get(34))));
