@@ -21,7 +21,7 @@ const inputLoginPassword = document.querySelector(".login_input--password");
 const buttonLogin = document.querySelector(".login_button");
 const buttonRegister = document.querySelector(".register-button");
 
-const name = document.getElementById("pname").value;
+const name1 = document.getElementById("pname").value;
 const street = document.getElementById("street").value;
 const area = document.getElementById("area").value;
 const city = document.getElementById("city").value;
@@ -128,11 +128,17 @@ if (navigator.geolocation)
       alert("cannot fetch location");
     }
   );
-
+///////////////////////////////////////////////////////////////////////////
 //AWS related Function
 async function submitMessage() {
+  var name = document.getElementById("pname").value;
+  var street = document.getElementById("street").value;
+  var area = document.getElementById("area").value;
+  var city = document.getElementById("city").value;
+  var pincode = document.getElementById("pincode").value;
+  var mobile = document.getElementById("mobile").value;
   fetch(
-    "https://wqvg69mlyf.execute-api.ap-south-1.amazonaws.com/production/message",
+    "https://wqvg69mlyf.execute-api.ap-south-1.amazonaws.com/production/message", // API name : water-leakage-api
     {
       method: "POST",
       body: JSON.stringify({
@@ -142,15 +148,15 @@ async function submitMessage() {
         city: city,
         pincode: pincode,
         mobile: mobile,
-        //latitude: lat,
-        //longitude: lng,
+        latitude: lat,
+        longitude: lng,
       }),
     }
   )
     .then((response) => response.json())
     .then((response) => {
       console.log(response);
-      // document.getElementById("messages").innerHTML += "<p>" + message + "</p>"; // Add new message to message list
+      //document.getElementById("messages").innerHTML += "<p>" + message + "</p>"; // Add new message to message list
     });
   console.log(lat);
   console.log(lng);
