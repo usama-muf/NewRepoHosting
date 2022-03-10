@@ -158,8 +158,6 @@ async function submitMessage() {
       console.log(response);
       //document.getElementById("messages").innerHTML += "<p>" + message + "</p>"; // Add new message to message list
     });
-  console.log(lat);
-  console.log(lng);
   thankYou();
 }
 
